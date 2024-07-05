@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>E-Commerce shopping cart</title>
+    <script src="https://kit.fontawesome.com/6275a7b774.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <div class="container">
+        <div id="pageTop">
+            <div class="pageTopContent">
+                <div class="contact">
+                    <i class="fa-solid fa-phone" id="contactImg"></i>
+                    <p id="contactNo">+001234567890</p>
+                </div>
+                <div class="shop">
+                    <div id="discount"><p class="discountText"><a href="">Get 50% Off on Selected Items</a></p></div>
+                    <div id="purchase"> <p class="purchaseText"><a href="Shop Now">Shop Now</a></p></div>
+                </div>
+                <div class="locationAndLanguage">
+                    <div id="language">
+                        <div class="languageText">
+                            <p class="languageTextContent">Eng</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="languageList" style="display: none; position: absolute;">
+                            <ul>
+                                <li>Arabic</li>
+                                <li>Urdu</li>
+                                <li>Bangla</li>
+                                <li>French</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="location">
+                        <div class="locationText">
+                            <p class="locationTextContent">Location</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="locationList" style="display: none; position: absolute;">
+                            <ul>
+                                <li>Africa</li>
+                                <li>Darka</li>
+                                <li>USA</li>
+                                <li>India</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <header >
+            <div class="headerLogo">
+                <img src="cart LOGO.svg" alt="">
+            </div>
+            <div class="headerMenu">
+                <div class="headerMenuList">
+                    <ul>
+                        <li class="headerMenuListDropdown">Category  <i class="fa-solid fa-angle-down"></i></li>
+                        <li>Deals</li>
+                        <li>What's New</li>
+                        <li>Delivery</li>
+                        <li id="#searchBar"><input type="search" placeholder="Search Product"> <i class="fa-solid fa-magnifying-glass"></i></li>
+                    </ul>
+                </div>
+                <div class="headerSubMenuList" style="display: none">
+                    <h3>Popular Categories</h3>
+                    <div class="items">
+                        <div class="item">
+                            <span class="itemImg"><img src="furniture.png" alt=""></span>
+                            <span class="itemText">
+                                <p class="itemName">furniture</p>
+                                <p class="itemAmount">240 items available</p>
+                            </span>
+                        </div>
+                        <div class="item">
+                            <span class="itemImg"> <img src="bag.png" alt=""></span>
+                            <span class="itemText">
+                                <p class="itemName">Hand Bag</p>
+                                <p  class="itemAmount">240 items available</p>
+                            </span>
+                        </div>
+                        <div class="item">
+                            <span class="itemImg"><img src="shoe.png" alt=""></span>
+                            <span class="itemText">
+                                <p class="itemName">shoe</p>
+                                <p  class="itemAmount">240 items available</p>
+                            </span>
+                        </div>
+                        <div class="item">
+                            <span class="itemImg"><img src="headphone.png" alt=""></span>
+                            <span class="itemText">
+                                <p class="itemName">Headphone</p>
+                                <p  class="itemAmount">240 items available</p>
+                            </span>
+                        </div>
+                        <div class="item">
+                            <span class="itemImg"> <img src="laptop.png" alt=""></span>
+                            <span class="itemText">
+                                <p class="itemName">Laptop</p>
+                                <p  class="itemAmount">240 items available</p>
+                            </span>
+                        </div>
+                        <div class="item">
+                            <span class="itemImg"> <img src="book.png" alt=""></span>
+                            <span class="itemText">
+                                <p class="itemName">Book</p>
+                                <p  class="itemAmount">240 items available</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="headerAccountAndCart">
+                <span id="account">
+                    <span class="accountIcon"><i class="fa-regular fa-user"></i></span>
+                    <span id="accountText">Account</span>
+                </span>
+                <span id="cart">
+                    <span class="cartIcon"><i class="fa-solid fa-cart-plus"></i></span>
+                    <span class="cartText">Cart</span>
+                </span>
+            </div>
+        </header>
+        <div id="intro" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <div class="introInfo">
+                <div class="introText">
+                    <h1>Shopping And Department Store.</h1>
+                    <p>Shopping is a bit of a relaxing hobby for me, which is sometimes troubling for the bank balance.</p>
+                    <button>learn more</button>
+                </div>
+                <div class="introImg">
+                    <img src="bags.png" alt="">
+                    <img src="tour.png" alt="">
+                    <img src="gadgets.png" alt="">
+                    <img src="snacks.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="categories" data-aos="fade-up" data-aos-duration="2000">
+           <div class="categoryItem">
+             <h2> Shop our top categories</h2>
+             <div class="categoryList">
+                <a href=""  data-aos="zoom-in" data-aos-duration="1800"><div class="category furniture"> furniture</div></a>
+                <a href=""  data-aos="zoom-in" data-aos-duration="1800"> <div class="category handbag "> hand Bag</div></a>
+                <a href=""  data-aos="zoom-in" data-aos-duration="1800"><div class="category books"> Books</div></a>
+                <a href=""  data-aos="zoom-in" data-aos-duration="1800"> <div class="category tech"> Tech</div></a>
+                <a href=""  data-aos="zoom-in" data-aos-duration="1800"><div class="category sneakers">Sneakers</div></a>
+                <a href=""  data-aos="zoom-in" data-aos-duration="1800"><div class="category travel"> travel</div></a>
+            </div>
+           </div>
+        </div>
+        <div id="bestDeals" data-aos="fade-up" data-aos-duration="2500" >
+           <h2>todays best deals for you</h2>
+           <div class="deals">
+                <div class="deal" >
+                    
+                    <div class="dealItemDisplay">
+                        <div class="markDealItemAsFavorite"> <i class="fa-regular fa-heart" ></i></div>
+                        <div class="dealItemImg"><img src="homepadMini.png" alt=""></div>
+                    </div>
+                    <div class="dealItemDispalyInfo">
+                        <span class="displayInfoNameAndPrice">
+                            <p class="dealItemDisplayName">HomePod mini</p>
+                            <p class="dealItemDisplayPrice"> <sup>$</sup> <span class="dealItemDisplayPriceAmnt" >239</span> <sup>.00</sup></p>
+                        </span>
+                        <p class="dealItemDispalyDescription">Table with air purifier stained venner/black</p>
+                        <span class="rating">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <sup>(200)</sup>
+                        </span>
+                    </div>
+                    <div class="dealItemAddToCart">
+                          <button>add to cart</button>
+                    </div>
+                </div>
+                <div class="deal">
+                     <div class="dealItemDisplay">
+                        <div class="markDealItemAsFavorite"> <i class="fa-regular fa-heart" ></i></div>
+                        <div class="dealItemImg"><img src="instax.png" alt=""></div>
+                    </div>
+                     <div class="dealItemDispalyInfo">
+                        <span class="displayInfoNameAndPrice">
+                             <p class="dealItemDisplayName">Instax Mini 9</p>
+                             <p class="dealItemDisplayPrice"> <sup>$</sup> <span class="dealItemDisplayPriceAmnt" >239</span> <sup>.00</sup></p>
+                         </span>
+                         <p class="dealItemDispalyDescription">Selfie mode and selfie mirror</p>
+                         <span class="rating">
+                                 <i class="fa-regular fa-star"></i>
+                                 <i class="fa-regular fa-star"></i>
+                                 <i class="fa-regular fa-star"></i>
+                                 <i class="fa-regular fa-star"></i>
+                                 <i class="fa-regular fa-star"></i>
+                                 <sup>(200)</sup>
+                         </span>
+                     </div>
+                     <div class="dealItemAddToCart">
+                           <button>add to cart</button>
+                     </div>
+                </div>
+                <div class="deal">
+                    <div class="dealItemDisplay">
+                        <div class="markDealItemAsFavorite"> <i class="fa-regular fa-heart" ></i></div>
+                        <div class="dealItemImg"><img src="base camp duffel.png" alt=""></div>
+                    </div>
+                     <div class="dealItemDispalyInfo">
+                        <span class="displayInfoNameAndPrice">
+                             <p class="dealItemDisplayName">base camp duffel M</p>
+                             <p class="dealItemDisplayPrice"> <sup>$</sup> <span class="dealItemDisplayPriceAmnt" >239</span> <sup>.00</sup></p>
+                         </span>
+                         <p class="dealItemDispalyDescription">Table with air purifier stained venner/black</p>
+                         <span class="rating">
+                                 <i class="fa-regular fa-star"></i>
+                                 <i class="fa-regular fa-star"></i>
+                                 <i class="fa-regular fa-star"></i>
+                                 <i class="fa-regular fa-star"></i>
+                                 <i class="fa-regular fa-star"></i>
+                                 <sup>(200)</sup>
+                         </span>
+                     </div>
+                     <div class="dealItemAddToCart">
+                           <button>add to cart</button>
+                     </div>
+                </div>
+                <div class="deal">
+                    <div class="dealItemDisplay">
+                        <div class="markDealItemAsFavorite"> <i class="fa-regular fa-heart" ></i></div>
+                        <div class="dealItemImg"><img src="Tote Medium.png" alt=""></div>
+                    </div>
+                     <div class="dealItemDispalyInfo">
+                        <span class="displayInfoNameAndPrice">
+                             <p class="dealItemDisplayName">Tot e Medium</p>
+                             <p class="dealItemDisplayPrice"> <sup>$</sup> <span class="dealItemDisplayPriceAmnt" >239</span> <sup>.00</sup></p>
+                         </span>
+                         <p class="dealItemDispalyDescription">canvas, full green leather</p>
+                         <span class="rating">
+                                 <i class="fa-regular fa-star"></i>
+                                 <i class="fa-regular fa-star"></i>
+                                 <i class="fa-regular fa-star"></i>
+                                 <i class="fa-regular fa-star"></i>
+                                 <i class="fa-regular fa-star"></i>
+                                 <sup>(200)</sup>
+                         </span>
+                     </div>
+                     <div class="dealItemAddToCart">
+                           <button>add to cart</button>
+                     </div>
+                </div>
+                <div class="deal">
+                    <div class="dealItemDisplay">
+                        <div class="markDealItemAsFavorite"> <i class="fa-regular fa-heart" ></i></div>
+                        <div class="dealItemImg"><img src="tomfordWatchMini.png" alt=""></div>
+                    </div>
+                     <div class="dealItemDispalyInfo">
+                        <span class="displayInfoNameAndPrice">
+                             <p class="dealItemDisplayName">HomePod mini</p>
+                             <p class="dealItemDisplayPrice"> <sup>$</sup> <span class="dealItemDisplayPriceAmnt" >239</span> <sup>.00</sup></p>
+                         </span>
+                         <p class="dealItemDispalyDescription">Table with air purifier stained venner/black</p>
+                         <span class="rating">
+                                 <i class="fa-regular fa-star"></i>
+                                 <i class="fa-regular fa-star"></i>
+                                 <i class="fa-regular fa-star"></i>
+                                 <i class="fa-regular fa-star"></i>
+                                 <i class="fa-regular fa-star"></i>
+                                 <sup>(200)</sup>
+                         </span>
+                     </div>
+                     <div class="dealItemAddToCart">
+                           <button>add to cart</button>
+                     </div>
+                </div>
+                <div class="deal">
+                      <div class="dealItemDisplay">
+                        <div class="markDealItemAsFavorite"> <i class="fa-regular fa-heart" ></i></div>
+                        <div class="dealItemImg"><img src="homepodMini.png" alt=""></div>
+                    </div>
+                     <div class="dealItemDispalyInfo">
+                        <span class="displayInfoNameAndPrice">
+                             <p class="dealItemDisplayName">HomePod mini</p>
+                             <p class="dealItemDisplayPrice"> <sup>$</sup> <span class="dealItemDisplayPriceAmnt" >239</span> <sup>.00</sup></p>
+                         </span>
+                         <p class="dealItemDispalyDescription">Table with air purifier stained venner/black</p>
+                         <span class="rating">
+                                 <i class="fa-regular fa-star"></i>
+                                 <i class="fa-regular fa-star"></i>
+                                 <i class="fa-regular fa-star"></i>
+                                 <i class="fa-regular fa-star"></i>
+                                 <i class="fa-regular fa-star"></i>
+                                 <sup>(200)</sup>
+                         </span>
+                     </div>
+                     <div class="dealItemAddToCart">
+                           <button>add to cart</button>
+                     </div>
+                </div>
+           </div>
+        </div>
+        <div id="brandDisplay" data-aos="fade-up" data-aos-duration="1000">
+           <h2>Choose By Brand</h2>
+           <div class="brands">
+            <div class="brand"  data-aos="zoom-in" data-aos-duration="1000">
+                <section class="brandLogo">
+                    <img src="staples.png" alt="">
+                </section>
+                <section class="brandInfo">
+                    <p class="brandName">Staples</p>
+                    <p class="brandDelivery">Delivery with in 24 hours</p>
+                </section>
+            </div>
+            <div class="brand"  data-aos="zoom-in" data-aos-duration="1000">
+                <section class="brandLogo">
+                    <img src="sprout.png" alt="">
+                </section>
+                <section class="brandInfo">
+                    <p class="brandName">Sprouts</p>
+                    <p class="brandDelivery">Delivery with in 24 hours</p>
+                </section>
+            </div>
+            <div class="brand" data-aos="zoom-in" data-aos-duration="1000">
+                <section class="brandLogo">
+                    <img src="grocery.png" alt="">
+                </section>
+                <section class="brandInfo">
+                    <p class="brandName">Grocery outlet</p>
+                    <p class="brandDelivery">Delivery with in 24 hours</p>
+                </section>
+            </div>
+            <div class="brand" data-aos="zoom-in" data-aos-duration="1000">
+                <section class="brandLogo">
+                    <img src="mollie.png" alt="">
+                </section>
+                <section class="brandInfo">
+                    <p class="brandName">Mollie stones</p>
+                    <p class="brandDelivery">Delivery with in 24 hours</p>
+                </section>
+            </div>
+            <div class="brand" data-aos="zoom-in" data-aos-duration="1000">
+                <section class="brandLogo">
+                    <img src="sports.png" alt="">
+                </section>
+                <section class="brandInfo">
+                    <p class="brandName">Sports Basement</p>
+                    <p class="brandDelivery">Delivery with in 24 hours</p>
+                </section>
+            </div>
+            <div class="brand" data-aos="zoom-in" data-aos-duration="1000">
+                <section class="brandLogo">
+                    <img src="container.png" alt="">
+                </section>
+                <section class="brandInfo">
+                    <p class="brandName">Container Store</p>
+                    <p class="brandDelivery">Delivery with in 24 hours</p>
+                </section>
+            </div>
+            <div class="brand" data-aos="zoom-in" data-aos-duration="1000">
+                <section class="brandLogo">
+                    <img src="target.png" alt="">
+                </section>
+                <section class="brandInfo">
+                    <p class="brandName">Target</p>
+                    <p class="brandDelivery">Delivery with in 24 hours</p>
+                </section>
+            </div>
+            <div class="brand" data-aos="zoom-in" data-aos-duration="1000">
+                <section class="brandLogo">
+                    <img src="bevmo.png" alt="">
+                </section>
+                <section class="brandInfo">
+                    <p class="brandName">Bevmo!</p>
+                    <p class="brandDelivery">Delivery with in 24 hours</p>
+                </section>
+            </div>
+           </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>    
+<script src="script.js"></script>    
+</body>
+</html>
