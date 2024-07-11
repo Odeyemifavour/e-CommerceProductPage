@@ -551,16 +551,24 @@ header{
 #bestDeals .deals .deal  .dealItemDisplay
 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: whitesmoke;
-    border-radius: 20px;
     justify-content: center;
-    padding: 1em 0;
+    gap: 5px;
+    border-radius: 20px;
 }
 #bestDeals .deals .deal  .dealItemDisplay .markDealItemAsFavorite 
 {
     cursor: pointer;
     
+}
+#bestDeals .deals .deal  .dealItemDisplay .markDealItemAsFavorite i
+{
+    float: right;
+    margin: 0.5em 0.5em;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: whitesmoke;
 }
 #bestDeals .deals .deal  .dealItemDisplay .dealItemImg img
 {
@@ -902,16 +910,23 @@ header{
 #popularProducts .products .product .productItemDisplay
 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: whitesmoke;
-    border-radius: 20px;
     justify-content: center;
-    padding: 1em 0;
+    gap: 5px;
+    border-radius: 20px;
 }
 #popularProducts .products .product  .productItemDisplay .markproductItemAsFavorite 
 {
     cursor: pointer;
-    
+}
+ .markProductItemAsFavorite i
+{
+    float: right;
+    margin: 0.5em 0.5em;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: whitesmoke;
 }
 #popularProducts .products .product  .productItemDisplay .productItemImg img
 {
@@ -1135,6 +1150,7 @@ header{
 #bestDeal .bestDealItems .dealItem .dealItemDisplay .ItemImg img
 {
     transition: 1s;
+    cursor: pointer;
 }
 #bestDeal .bestDealItems .dealItem .dealItemDisplay .ItemImg img:hover
 {
@@ -1268,4 +1284,156 @@ header{
 #cashBackOffer .cashBackOfferDetails .cashBackCard .card3
 {
     transform: rotate(-20deg);
+}
+#sellingProducts
+{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    padding: 5em 0;
+}
+#sellingProducts  h2
+{
+    color: rgb(44, 43, 43);
+    text-transform: capitalize;
+    margin: 1em 0;
+}
+#sellingProducts .sellingProductItems
+{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 34%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    margin: 1em 0;
+}
+#sellingProducts .sellingProductItems .sellingProduct
+{
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 10px;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+#sellingProducts .sellingProductItems .sellingProduct .sellingProductItemDisplay
+{
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 20px;
+}
+#sellingProducts .sellingProductItems .sellingProduct .sellingProductItemDisplay .sellingProductmarkAsFavorite
+{
+}
+#sellingProducts .sellingProductItems .sellingProduct .sellingProductItemDisplay .sellingProductmarkAsFavorite i
+{
+    
+    float: right;
+    margin: 0.5em 0.5em;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: whitesmoke;
+}
+#sellingProducts .sellingProductItems .sellingProduct .sellingProductItemDisplay .sellingproductItemImg
+{
+    transition: 2s;
+    cursor: pointer;
+}
+#sellingProducts .sellingProductItems .sellingProduct .sellingProductItemDisplay .sellingproductItemImg img:hover
+{
+    transform: scale(1.2);
+}
+#sellingProducts .sellingProductItems .sellingProduct .sellingProductDispalyInfo
+{
+    display: flex;
+    flex-direction: column;
+}
+#sellingProducts .sellingProductItems .sellingProduct .sellingProductDispalyInfo .sellingProductNameAndPrice
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+}
+.sellingProductItemDisplayName
+{
+    color: rgb(21, 19, 19);
+    font-weight: bold;
+    margin: 0.5em 0;
+}
+.productItemDisplayPriceAmnt
+{
+    
+    color: rgb(21, 19, 19);
+    font-weight: 800;
+}
+.sellingProductDescription
+{
+    font-size: 12px;
+    color: rgb(21, 19, 19);
+    margin: 0.5em 0;
+}
+.sellingProductDispalyInfo .rating
+{
+    padding:0.5em 0;
+    cursor: pointer;
+}
+.sellingProductItemAddToCart
+{
+    margin: 0.5em 0;
+}
+.sellingProductItemAddToCart button
+{
+    width: 120px;
+    padding: 10px;
+    background: none;
+    border: 1px solid rgb(21, 19, 19);
+    border-radius: 20px;
+    text-transform: capitalize;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+.sellingProductItemAddToCart button:hover
+{
+    background:  rgb(4, 42, 42);
+    color: white;
+    cursor: pointer;
+    transition: background 0.5s ease-in;
+}
+#trendingProduct
+{
+    width: 90%;
+    margin: auto;
+}
+#trendingProduct h2
+{
+    color: rgb(44, 43, 43);
+    text-transform: capitalize;
+    margin: 1em 0;
+}
+.trendingProductDisplay
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    align-items:center ;
+}
+.trendingProductDisplay div
+{
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+.trendingProductDisplay div img
+{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.trendingProductDisplay div h2
+{
+    color:#231f1e;
+
 }
