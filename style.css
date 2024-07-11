@@ -9,6 +9,8 @@
 body
 {
     background: white;
+    width: 100vw;
+    overflow-x: hidden;
 }
 .container
 {
@@ -466,6 +468,9 @@ header{
     margin: 0 0.2em ;
     animation: fadeIn 4s ease-in-out ;
     cursor:pointer;
+    /* transition-duration: 10s;
+    transition-timing-function: ease-in-out; */
+    transition:all 1s ease-in ;
 }
 #categories .categoryList a  .category:hover
 {
@@ -663,7 +668,8 @@ header{
 #brandDisplay .brands
 {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
 }
 #brandDisplay .brands .brand 
 {
@@ -673,21 +679,17 @@ header{
     background-color: whitesmoke;
     margin-top: 0.8em;
     margin-bottom: 0.8em;
-    margin-right: 0.8em;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     cursor: pointer;
     justify-content: space-between;
+    border: transparent;
 }
 #brandDisplay .brands .brand:hover
 {
-    border: 1px solid ;
-    color: rgb(44, 43, 43);
+
 }
-#brandDisplay .brands .brand .brandLogo
-{
-    /* padding-right: 1em; */
-}
+
 #brandDisplay .brands .brand .brandLogo img
 {
     transition: .5s;
@@ -711,4 +713,559 @@ header{
 {
     color: rgb(44, 43, 43);
     font-size: 12px;
+}
+#discountArea
+{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 4em 0;
+}
+#discountArea h2
+{
+    color: rgb(44, 43, 43);
+    text-transform: capitalize;
+    margin: 1em 0;
+}
+#discountArea .discountProducts
+{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+#discountArea .discountProducts .discountProductInfo .discountPrice
+{
+    font-size: 22px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+#discountArea .discountProducts .discountProduct
+{
+    width: 25%;
+   
+}
+#discountArea .discountProducts .furniture .discountProductInfo
+{
+    background: #f2e4d9;
+    padding: 2em 1em;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+#discountArea .discountProducts .furniture .discountProductInfo .discountInfo
+{
+    font-size: 15px;
+}
+#discountArea .discountProducts .furniture .discountProductInfo .discountPrice span
+{
+    color: #cb9917;
+    font-size: 50px;
+}
+#discountArea .discountProducts .furniture .discountProductImg img
+{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px ;
+}
+#discountArea .discountProducts .book .discountProductInfo
+{
+    background: #f9dcdc;
+    padding: 2em 1em;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+#discountArea .discountProducts .book .discountProductInfo .discountInfo
+{
+    font-size: 15px;
+}
+#discountArea .discountProducts .book .discountProductInfo .discountPrice span
+{
+    color: #961f1f;
+    font-size: 50px;
+}
+#discountArea .discountProducts .book .discountProductImg img
+{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px ;
+}
+#discountArea .discountProducts .shirt .discountProductInfo
+{
+    background: #f2e4d9;
+    padding: 2em 1em;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+#discountArea .discountProducts .shirt .discountProductInfo .discountInfo
+{
+    font-size: 15px;
+}
+#discountArea .discountProducts .shirt .discountProductInfo .discountPrice span
+{
+    color: #94623c;
+    font-size: 50px;
+}
+#discountArea .discountProducts .shirt .discountProductImg img
+{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px ;
+}
+#discountArea .discountProducts .bag .discountProductInfo
+{
+    background: #d2f7ec;
+    padding: 2em 1em;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+#discountArea .discountProducts .bag .discountProductInfo .discountInfo
+{
+    font-size: 15px;
+}
+#discountArea .discountProducts .bag .discountProductInfo .discountPrice span
+{
+    color: #003d29;
+    font-size: 50px;
+}
+#discountArea .discountProducts .bag .discountProductImg img
+{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px ;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#discountArea .discountProducts .discountProduct {
+    animation: fadeInUp 1s ease-in-out both;
+}
+#discountArea .discountProducts .discountProduct:nth-child(1) {
+    animation-delay: 0.1s;
+}
+#discountArea .discountProducts .discountProduct:nth-child(2) {
+    animation-delay: 0.3s;
+}
+#discountArea .discountProducts .discountProduct:nth-child(3) {
+    animation-delay: 0.5s;
+}
+#discountArea .discountProducts .discountProduct:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+
+#popularProducts
+{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    padding: 5em 0;
+}
+#popularProducts h2
+{
+    color: rgb(44, 43, 43);
+    text-transform: capitalize;
+    margin: 1em 0;
+}
+#popularProducts .products
+{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 34%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    margin: 1em 0;
+}
+#popularProducts .products .product
+{
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 10px;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+#popularProducts .products .product .productItemDisplay
+{
+    display: flex;
+    flex-direction: row;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    justify-content: center;
+    padding: 1em 0;
+}
+#popularProducts .products .product  .productItemDisplay .markproductItemAsFavorite 
+{
+    cursor: pointer;
+    
+}
+#popularProducts .products .product  .productItemDisplay .productItemImg img
+{
+    transition: 1s;
+    cursor: pointer;
+}
+#popularProducts .products .product  .productItemDisplay .productItemImg img:hover
+{
+    transform: scale(1.2);
+}
+
+#popularProducts .products .product  .productItemDisplay .productItemDispalyInfo
+{
+    display: flex;
+    flex-direction: column;
+}
+#popularProducts .products .product  .productItemDispalyInfo .productInfoNameAndPrice
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+}
+#popularProducts .products .product  .productItemDispalyInfo .productInfoNameAndPrice .productItemDisplayName
+{
+    color: rgb(21, 19, 19);
+    font-weight: bold;
+    margin: 0.5em 0;
+}
+#popularProducts .products .product  .productItemDispalyInfo .productInfoNameAndPrice p .productItemDisplayPriceAmnt
+{
+    color: rgb(21, 19, 19);
+    font-weight: 800;
+}
+#popularProducts .products .product .productItemDispalyInfo .productItemDispalyDescription
+{
+    font-size: 12px;
+    color: rgb(21, 19, 19);
+    margin: 0.5em 0;
+
+}
+#popularProducts .products .product .productItemDispalyInfo .rating
+{
+    padding: 5em 0;
+    cursor: pointer;
+
+}
+
+#popularProducts .products .product .productItemAddToCart 
+{
+    margin: 1.5em 0;
+}
+#popularProducts .products .product .productItemAddToCart  button
+{
+    width: 120px;
+    padding: 10px;
+    background: none;
+    border: 1px solid rgb(21, 19, 19);
+    border-radius: 20px;
+    text-transform: capitalize;
+    animation: fadeIn 5s ease-in-out forwards;
+}
+#popularProducts .products .product .productItemAddToCart  button:hover
+{
+    background:  rgb(4, 42, 42);
+    color: white;
+    cursor: pointer;
+    transition: background 0.5s ease-in;
+}
+::-webkit-scrollbar
+{
+    width: 5px;
+    height: 4px;
+}
+::-webkit-scrollbar-track
+{
+    background: white;
+}
+::-webkit-scrollbar-thumb
+{
+    border-radius: 20px;
+    background: rgb(4, 42, 42);
+}
+
+#cashBackDiscount
+{
+    width: 100%;
+    background: url('discountBanner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 700px;
+    /* transition: background 1s; */
+}
+/* #cashBackDiscount:hover
+{
+    transform: scale(1.3);
+
+} */
+
+#cashBackDiscount .cashBackInfo
+{
+    background-color: #003d29;
+    color: white;
+    width: 35%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    float: right;
+    text-align: left;
+    height: 500px;
+    margin-top: 150px;
+    margin-right: 100px;
+    
+}
+#cashBackDiscount .cashBackInfo h1
+{
+    font-size: 45px;
+    width: 80%;
+}
+#cashBackDiscount .cashBackInfo p
+{
+    padding: 1em 0;
+}
+#cashBackDiscount .cashBackInfo button
+{
+    cursor: pointer;
+    width: 35%;
+    padding: 10px;
+    border-radius: 30px;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    text-transform: capitalize;
+    font-weight: 600;
+    transition: 0.5s;
+}
+#cashBackDiscount .cashBackInfo button:hover
+{
+    background-color: #231f1e;
+    border: 1px solid #231f1e ;
+
+}
+#bestDeal
+{
+    width: 90%;
+    margin: auto;
+    padding: 5em 0;
+    display: flex;
+    flex-direction: column;
+
+}
+#bestDeal h2
+{
+    color: rgb(44, 43, 43);
+    text-transform: capitalize;
+    margin: 1em 0;
+}
+#bestDeal .bestDealBtn button
+{
+    text-transform: capitalize;
+    padding: 10px;
+    background: none;
+    border-radius: 30px;
+    width: 100px;
+    margin-right: 0.8em;
+    border: 1px solid rgb(138, 135, 135);
+    cursor: pointer;
+    transition: 1s;
+    font-weight: 500;
+}
+#bestDeal .bestDealBtn button:hover
+{
+    background-color: rgb(4, 42, 42);
+    color: white;
+}
+#bestDeal .bestDealItems
+{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: auto;
+    gap: 10px;
+    padding: 2em 0;
+    justify-content: space-around;
+}
+#bestDeal .bestDealItems .dealItem
+{
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 1em 0;
+    border-top-right-radius: 20px;
+}
+#bestDeal .bestDealItems .dealItem .dealItemDisplay
+{
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 20px;
+}
+#bestDeal .bestDealItems .dealItem .dealItemDisplay .markDealItemAsFavorite
+{
+    border-radius: 20px;
+}
+#bestDeal .bestDealItems .dealItem .dealItemDisplay .markDealItemAsFavorite i
+{
+    float: right;
+    margin: 0.5em 0.5em;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: whitesmoke;
+}
+#bestDeal .bestDealItems .dealItem .dealItemDisplay .ItemImg img
+{
+    transition: 1s;
+}
+#bestDeal .bestDealItems .dealItem .dealItemDisplay .ItemImg img:hover
+{
+    transform: scale(1.2);
+}
+#bestDeal  .dealItemDispalyDescription
+{
+    font-size: 12px;
+}
+
+#bestDeal .bestDealItems .dealItem  .dealitemInfoNameAndPrice
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1em 0;
+}
+#bestDeal .bestDealItems .dealItem  .dealitemInfoNameAndPrice .dealItemDisplayName
+{
+    color: rgb(21, 19, 19); 
+    font-weight: bold;
+}
+#bestDeal .bestDealItems .dealItem  .dealitemInfoNameAndPrice p 
+{
+    color: 231f1e;
+    font-weight: 800;
+}
+#bestDeal .bestDealItems .dealItem .dealItemDispalyInfo .rating
+{
+   
+    cursor: pointer;
+}
+#bestDeal .bestDealItems .dealItem .dealItemDispalyInfo .rating i
+{
+    font-size: 15px;
+    padding: 1em 0;
+}
+#bestDeal .bestDealItems .dealItem .dealItemAddToCart
+{
+    margin: 1em 0;
+}
+#bestDeal .bestDealItems .dealItem .dealItemAddToCart button
+{
+    width: 120px;
+    padding: 10px;
+    background: none;
+    border: 1px solid rgb(21, 19, 19);
+    border-radius: 20px;
+    text-transform: capitalize;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+#bestDeal .bestDealItems .dealItem .dealItemAddToCart button:hover
+{
+    background:  rgb(4, 42, 42);
+    color: white;
+    cursor: pointer;
+    transition: background 0.5s ease-in;
+}
+
+#cashBackOffer
+{
+    width: 100%;
+    margin: auto;
+    background-color: peachpuff;
+    margin: 3em  0;
+}
+#cashBackOffer .cashBackOfferDetails
+{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5em 0;
+}
+#cashBackOffer .cashBackOfferDetails .cashBackText
+{
+   
+}
+#cashBackOffer .cashBackOfferDetails .cashBackText h1
+{
+    font-size: 50px;
+    color: #333333;
+}
+#cashBackOffer .cashBackOfferDetails .cashBackText p
+{
+    color: #333333;
+}
+#cashBackOffer .cashBackOfferDetails .cashBackText button
+{
+    width: 30%;
+    padding: 15px;
+    border-radius: 30px;
+    margin: 1em 0;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: rgb(4, 42, 42);
+    cursor: pointer;
+    font-size: 18px;
+    transition: 1s;
+}
+#cashBackOffer .cashBackOfferDetails .cashBackText button:hover
+{
+    background-color: #231f1e;
+   
+}
+#cashBackOffer .cashBackOfferDetails .cashBackCard
+{
+   position: relative;
+    top: -80px;
+    left: 200px;
+   
+}
+#cashBackOffer .cashBackOfferDetails .cashBackCard div
+{
+   position: absolute;
+  
+}
+#cashBackOffer .cashBackOfferDetails .cashBackCard .card1
+{
+   top: 40px;
+}
+#cashBackOffer .cashBackOfferDetails .cashBackCard .card2
+{
+    top: 20px;
+    transform: translate(5px);
+    transform: rotate(-10deg);
+}
+#cashBackOffer .cashBackOfferDetails .cashBackCard .card3
+{
+    transform: rotate(-20deg);
 }
