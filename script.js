@@ -13,6 +13,7 @@ languageList.querySelectorAll('li').forEach(item => {
 });
 
 
+
 const locationText  = document.querySelector('.locationText');
 const locationTextContent = document.querySelector('.locationTextContent');
 const locationList = document.querySelector('.locationList');
@@ -25,11 +26,31 @@ locationList.querySelectorAll('li').forEach(item => {
         locationList.style.display = 'none';
     });
 });
-const headerMenuListDropdown = document.querySelector('.headerMenuListDropdown');
-const headerSubMenuList = document.querySelector('.headerSubMenuList');
-headerMenuListDropdown.addEventListener('click',()=>{
-    headerSubMenuList.style.display = headerSubMenuList.style.display === 'none'? 'block':'none';
-})
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const headerMenuListDropdown = document.querySelector('.headerMenuListDropdown');
+    const headerSubMenuList = document.querySelector('.headerSubMenuList');
+
+    headerMenuListDropdown.addEventListener('click', (event) => {
+        event.stopPropagation(); 
+        headerSubMenuList.style.display = headerSubMenuList.style.display === 'none' || headerSubMenuList.style.display === '' ? 'block' : 'none';
+    });
+
+    document.body.addEventListener('click', () => {
+        headerSubMenuList.style.display = 'none';
+    });
+
+    headerSubMenuList.addEventListener('click', (event) => {
+        event.stopPropagation();
+    });
+});
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const introText = document.querySelector('.introText');
     const introImg = document.querySelector('.introImg');

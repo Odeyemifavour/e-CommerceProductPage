@@ -189,6 +189,8 @@ body
 {
     border-bottom: none;
 }
+
+
 header{
     width: 90%;
     margin: auto;
@@ -269,7 +271,12 @@ header{
     position: absolute;
     top: 100px;
     z-index: 1;
+   
 }
+
+
+ 
+
 .headerSubMenuList h3
 {
     padding: 1em 0;
@@ -347,6 +354,11 @@ header{
     color: rgb(236, 125, 88);
     transition: 1s;
 }
+header  .hamburger{
+    display: none;
+}
+
+
 #intro
 {
     width: 100%;
@@ -437,6 +449,8 @@ header{
     animation: slideIn 1s ease-in-out forwards;
 }
 
+
+
 #categories 
 {
     width: 100%;
@@ -474,25 +488,25 @@ header{
     font-weight: bold;
     text-transform: capitalize;
 }
-#categories .categoryList a  .category
-{
+#categories .categoryList a .category {
     width: 200px;
     height: 250px;
     border-radius: 10px;
     text-align: center;
     padding: 10px;
-    margin: 0 0.2em ;
-    animation: fadeIn 4s ease-in-out ;
-    cursor:pointer;
-    transition-duration: 10s;
-    transition-timing-function: ease-in-out;
-    transition:all 1s ease-in ;
+    margin: 0 0.2em;
+    animation: fadeIn 4s ease-in-out;
     cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    transition: background-size 0.3s ease-in-out;
 }
-#categories .categoryList a  .category:hover
-{
-   background-size: 120%;
+
+#categories .categoryList a .category:hover {
+    background-size: 120%;
 }
+
 #categories a .furniture
 {
     background-image: url('category\ furniture.png');
@@ -535,6 +549,8 @@ header{
     background-position: center;
     background-size: cover;
 }
+
+
 #bestDeals
 {
     display: flex;
@@ -668,6 +684,8 @@ header{
     border-radius: 20px;
     background: rgb(4, 42, 42);
 }
+
+
 #brandDisplay
 {
     width:90%;
@@ -732,6 +750,8 @@ header{
     color: rgb(44, 43, 43);
     font-size: 12px;
 }
+
+
 #discountArea
 {
     width: 90%;
@@ -1739,9 +1759,249 @@ footer .footerBottom  section img
 }
 .markImportant
 {
-    color: goldenrod;
+    color: #077d55;
 }
 .unMarkImportant
 {
     display: none;
 }
+
+
+@media (min-width: 320px) and (max-width: 480px){
+    .container #pageTop
+    {
+        padding: 2px;
+    }
+    .container #pageTop .pageTopContent
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .container #pageTop .pageTopContent div 
+    {
+        margin: 0.3em 0;
+        font-size: 14px;
+    }
+    .container #pageTop .pageTopContent .contact
+    {
+       
+    }
+    .container #pageTop .pageTopContent .shop
+    {
+        display: none;
+    }
+    .container #pageTop .pageTopContent .locationAndLanguage
+    {
+        
+       
+    }
+    .container #pageTop .pageTopContent .locationAndLanguage div
+    {
+        margin: 0 ;
+        padding: 0.1em 0.5em;
+    }
+    .languageList, .locationList
+    {
+        top: 60px;
+    }
+    header 
+    {
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       justify-content: space-between;
+    }
+    header .headerLogo img
+    {
+        width: 150px;
+    }
+    .headerMenu, .headerAccountAndCart
+    {
+        display: none;
+    }
+     header .hamburger 
+    {
+        display: block;
+        font-size: 25px;
+    }
+
+    #intro
+    {
+        width: 100%;
+        margin: auto;
+    }
+    #intro .introInfo
+    {
+        width: 100%;
+        margin: auto;
+    }
+    #intro .introText 
+    {
+        font-size: 30px;
+        width: 80%;
+        padding: 1em 0;
+    }
+    #intro .introText  h1
+    {
+        width: 100%;
+        font-size: 30px;
+    }
+    #intro .introText  p
+    {
+        font-size: 13px;
+    }
+    #intro .introImg
+    {
+        display: none;
+    }
+    #intro .introText button
+    {
+        width: 150px;
+        padding: 10px;
+    }
+    
+    
+    #categories 
+    {
+        width: 100%;
+        margin: auto;
+        margin: 2em 0;
+    }
+    #categories .categoryItem 
+{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+}
+#categories .categoryItem  h2
+{
+    font-size: 20px;
+}
+#categories .categoryItem  .categoryList
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    row-gap: 10px;
+    width: 80%;
+    margin: auto;
+   
+}
+#categories .categoryList a .category 
+{
+    width: 160px;
+    height: 200px;
+}
+
+#bestDeals
+{
+    width: 100%;
+    margin: auto;
+    margin: 2em 0;
+}
+#bestDeals h2
+{
+    font-size: 20px;
+}
+#bestDeals .deals
+{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 50%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
+#bestDeals .deals .deal  .dealItemDisplay .dealItemImg img
+{
+    width: 150px;
+}
+#bestDeals .deals .deal  .dealItemDispalyInfo .displayInfoNameAndPrice p
+{
+    font-size: 13px;
+}
+
+#bestDeals .deals .deal  .dealItemDisplay
+{
+    padding: -10px;
+}
+#bestDeals .deals .deal  .dealItemDispalyInfo  .dealItemDispalyDescription
+{
+    font-size: 15px;
+}
+
+#brandDisplay
+{
+    width: 90%;
+    padding: 2em 0;
+}
+#brandDisplay h2
+{
+    font-size: 20px;
+}
+#brandDisplay .brands
+{
+    display: flex;
+    flex-direction: column;
+}
+#brandDisplay .brands .brand 
+{
+    padding: 18px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#brandDisplay .brands .brand .brandLogo img
+{
+    width: 80px;
+}
+#brandDisplay .brands .brand .brandInfo .brandName
+{
+    font-size: 20px;
+}
+#brandDisplay .brands .brand .brandInfo .brandDelivery
+{
+    font-size: 15px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
