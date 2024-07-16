@@ -62,3 +62,14 @@ markAsFavorites.forEach(markAsFavourite => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const stars = document.querySelectorAll(' .rating i');
+
+    stars.forEach(star => {
+        star.addEventListener('click', () => {
+            star.classList.toggle('fa-regular');
+            star.classList.toggle('fa-solid');
+            star.classList.toggle('markImportant');
+        });
+    });
+});
