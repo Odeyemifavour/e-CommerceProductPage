@@ -37,3 +37,28 @@ document.addEventListener('DOMContentLoaded', () => {
     introText.classList.add('animate');
     introImg.classList.add('animate');
 });
+
+
+const unMarkAsFavorites = document.querySelectorAll('.unMark');
+unMarkAsFavorites.forEach(unMarkAsFavourite => {
+    unMarkAsFavourite.addEventListener('click', () => {
+        const markAsFavourite = unMarkAsFavourite.nextElementSibling;
+        unMarkAsFavourite.style.display = 'none';
+        markAsFavourite.style.display = 'block';
+        markAsFavourite.classList.add('markfavourite');
+        unMarkAsFavourite.classList.add('unMarkFavourite');
+    });
+});
+
+
+const markAsFavorites = document.querySelectorAll('.mark');
+markAsFavorites.forEach(markAsFavourite => {
+    markAsFavourite.addEventListener('click', () => {
+        const unMarkAsFavourite = markAsFavourite.previousElementSibling;
+        markAsFavourite.style.display = 'none';
+        unMarkAsFavourite.style.display = 'block';
+        markAsFavourite.classList.remove('markfavourite');
+        unMarkAsFavourite.classList.remove('unMarkFavourite');
+    });
+});
+

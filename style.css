@@ -223,12 +223,17 @@ header{
 }
 .headerMenu .headerMenuList ul li
 {
-    padding: 0 1em;
+    padding: 0.4em 1em;
     font-weight: 600;
     color: rgb(54, 53, 53);
     font-size: 13px;
     word-spacing: 1px;
     cursor: pointer;
+    transition: 1s;
+}
+.headerMenu .headerMenuList ul .hover:hover 
+{
+    color: rgb(131, 127, 127);
 }
 .headerMenu .headerMenuList ul li:first-child:hover
 {
@@ -311,10 +316,11 @@ header{
 .headerAccountAndCart  #account
 {
    
-    font-size: 13px;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: 600;
     padding: 0 1em;
     cursor: pointer;
+    transition: 1s;
 }
 .headerAccountAndCart  #account span
 {
@@ -322,14 +328,24 @@ header{
 }
 .headerAccountAndCart   #cart
 {
-     font-size: 13px;
-    font-weight: bold;
+     font-size: 15px;
+    font-weight: 600;
     padding: 0 1em;
     cursor: pointer;
+    transition: 1s;
 }
 .headerAccountAndCart   #cart span
 {
       padding: 0 0.2em;
+}
+.headerAccountAndCart  #account .accountText,.headerAccountAndCart  #cart
+{
+    font-size: 14px;
+}
+.headerAccountAndCart  #account .accountText:hover, .headerAccountAndCart  #cart .cartText:hover
+{
+    color: rgb(236, 125, 88);
+    transition: 1s;
 }
 #intro
 {
@@ -561,7 +577,6 @@ header{
 #bestDeals .deals .deal  .dealItemDisplay .markDealItemAsFavorite 
 {
     cursor: pointer;
-    
 }
 #bestDeals .deals .deal  .dealItemDisplay .markDealItemAsFavorite i
 {
@@ -580,12 +595,6 @@ header{
 {
     transform: scale(1.2);
 }
-/* #bestDeals .deals .deal  .dealItemDisplay .markDealItemAsFavorite  i
-{
-    text-shadow: 3px 6px red inset;
-    color: red;
-    box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2)
-} */
 #bestDeals .deals .deal  .dealItemDisplay .dealItemDispalyInfo
 {
     display: flex;
@@ -1704,6 +1713,8 @@ footer .footerBottom
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin: 2em 0;
+    text-transform: capitalize;
 }
 footer .footerBottom .become-a-seller, footer .footerBottom .gift-card ,footer .footerBottom  .help-center
 {
@@ -1714,5 +1725,23 @@ footer .footerBottom .become-a-seller, footer .footerBottom .gift-card ,footer .
 }
 footer .footerBottom  section img
 {
+   font-size: 20px; 
+}
+
+.markfavourite
+{
+    color: red;
     
+}
+.unMarkFavourite
+{
+    display: none;
+}
+.markImportant
+{
+    color: goldenrod;
+}
+.unMarkImportant
+{
+    display: none;
 }
