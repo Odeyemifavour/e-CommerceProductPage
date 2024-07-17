@@ -455,7 +455,7 @@ header  .hamburger{
 {
     width: 100%;
     margin: auto;
-    margin: 4em 0;
+    padding: 4em 0;
 }
 #categories .categoryItem 
 {
@@ -1867,75 +1867,41 @@ footer .footerBottom  section img
     
     #categories 
     {
+        padding: 2em 0;
+    }
+    #categories .categoryItem h2
+    {
+        font-size: 20px;
+        padding: 0 1em;
+    }
+    #categories .categoryItem .categoryList
+    {
+        display: grid;
+        grid-template-columns: auto auto ;
         width: 100%;
         margin: auto;
-        margin: 2em 0;
+        justify-content: center;
+        gap: 30px;
+        align-items: center;
     }
-    #categories .categoryItem 
-{
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-        margin: auto;
-}
-#categories .categoryItem  h2
-{
-    font-size: 20px;
-}
-#categories .categoryItem  .categoryList
-{
-    display: grid;
-    grid-template-columns: auto auto;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    row-gap: 10px;
-    width: 80%;
-    margin: auto;
-   
-}
-#categories .categoryList a .category 
-{
-    width: 200px;
-    height: 200px;
-}
+    #categories .categoryList a 
+    {
+        font-size: 10px;
+    }
+    #categories .categoryList a .category
+    {
+      width: 160px;
+      height: 200px;
+    }
 
-#bestDeals
-{
-    width: 100%;
-    margin: auto;
-    margin: 2em 0;
-}
-#bestDeals h2
-{
-    font-size: 20px;
-    padding: 0 1em;
-}
-#bestDeals .deals
-{
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 50%;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-}
-#bestDeals .deals .deal  .dealItemDisplay .dealItemImg img
-{
-    width: 150px;
-}
-#bestDeals .deals .deal  .dealItemDispalyInfo .displayInfoNameAndPrice p
-{
-    font-size: 13px;
-}
-
-#bestDeals .deals .deal  .dealItemDisplay
-{
-    padding: -8px;
-}
-#bestDeals .deals .deal  .dealItemDispalyInfo  .dealItemDispalyDescription
-{
-    font-size: 15px;
-}
+    #bestDeals h2
+    {
+        font-size: 20px;
+    }
+    #bestDeals .deals
+    {
+        grid-auto-columns: 100%;
+    }
 
 #brandDisplay
 {
@@ -1996,59 +1962,52 @@ footer .footerBottom  section img
     width: 100%;
 }
 
+
+
 #popularProducts
 {
-    padding: 2em 0;
+   
 }
 #popularProducts h2
 {
-    
     font-size: 20px;
 }
 #popularProducts .products
 {
-    display: grid;
-grid-auto-flow: column;
-grid-auto-columns: 50%;
-overflow-x: auto;
-overscroll-behavior-inline: contain;
-}
-#popularProducts .products .product  .productItemDisplay .productItemImg img
-{
-    width: 150px;
-}
-#popularProducts .products .product  .productItemDisplay
-{
-    
-}
-#popularProducts .products .product  .productItemDispalyInfo .productInfoNameAndPrice p
-{
-    font-size: 10px;
-
-}
-#popularProducts .products .product .productItemDispalyInfo .productItemDispalyDescription
-{
-    font-size: 15px;
+    grid-auto-columns: 100%;
 }
 #cashBackDiscount
 {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+   
     height: 400px;  
 }
 #cashBackDiscount .cashBackInfo
 {
-    width: 100%;
-  padding: 10px;
-  height: 200px;
+    width: 90%;
+    margin: auto;
+    height: 300px;
+    display: flex;
+    justify-content: center;
 
 }
 #cashBackDiscount .cashBackInfo h1 
 {
     
+    font-size: 20px;
+    width: 100%;
+}
+#cashBackDiscount .cashBackInfo p
+{
+    font-size: 13px;
+    width: 100%;
+}
+#cashBackDiscount .cashBackInfo button
+{
     font-size: 10px;
+    padding: 8px;
 }
 }
 
