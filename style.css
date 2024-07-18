@@ -1673,8 +1673,11 @@ footer .footerTop
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1.5em 0;
-    width: 100%;
+    margin: 2em 0;
+}
+footer .footerTop .paymentOption, footer .footerTop .departmentAndAbout, footer .footerTop .servicesAndHelp
+{
+    width: 25%;
 }
 footer .footerTop section h4
 {
@@ -1685,14 +1688,9 @@ footer .footerTop section h4
 }
 footer .footerTop .departmentAndAbout
 {
-    display: flex;
-    flex-direction: row;
-   
-}
-footer .footerTop .departmentAndAbout section
-{
-    margin: 0 3em;
-    width: 100%;
+   display: flex;
+   flex-direction: row;
+  justify-content: space-between;
 }
 footer .footerTop .departmentAndAbout section h4
 {
@@ -1701,11 +1699,9 @@ footer .footerTop .departmentAndAbout section h4
 }
 footer .footerTop .servicesAndHelp
 {
-   display: flex;
-}
-footer .footerTop .servicesAndHelp section
-{
-    margin: 0 3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 footer .footerTop .servicesAndHelp section h4
 {
@@ -1736,10 +1732,6 @@ footer .footerTop section ul li a:hover
 {
     color: #961f1f;
     padding-left: 5px;
-}
-footer .footerTop .paymentOption
-{
-    width: 30%;
 }
 footer .footerTop .paymentOption p
 {
@@ -1787,9 +1779,9 @@ footer .footerBottom
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 2em 0;
+    margin: 1em 0;
     text-transform: capitalize;
-    font-size: 15px;
+    font-size: 14px;
 }
 footer .footerBottom .sellerGiftAndHelp, footer .footerBottom .serviceTermsAndPrivacy
 {
@@ -1812,7 +1804,15 @@ footer .footerBottom  section img
 {
    font-size: 20px; 
 }
-
+footer .footerBottom  section p
+{
+    transition: 1s;
+    font-weight: 500;
+}
+footer .footerBottom  section p:hover
+{
+    color: #605d5d;
+}
 .markfavourite
 {
     color: red;
@@ -2278,27 +2278,36 @@ footer .footerTop
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-}
-footer .footerTop
-{
-    padding: 0.1em 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 footer .footerTop .paymentOption
 {
-    width:90%
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
-footer .footerTop section 
+footer .footerTop .paymentOption .footerLogo
 {
-    margin: 2em 0;
+    display: flex;
+    justify-content: center;
+   
+   margin-bottom: 1em;
 }
 footer .footerTop .paymentOption .acceptedPayments
 {
     margin: 1em 0;
+}
+footer .footerTop .departmentAndAbout, footer .footerTop .servicesAndHelp
+{
+    margin: 1em 0;
+}
+footer .footerTop .paymentOption, footer .footerTop .departmentAndAbout, footer .footerTop .servicesAndHelp
+{
+    width: 80%;
+}
+footer .footerTop section ul li a
+{
+    font-size: 13px;
 }
 footer .footerBottom
 {
