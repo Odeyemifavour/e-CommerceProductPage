@@ -95,3 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+const hamburger = document.querySelector('.hamburger');
+hamburger.addEventListener('click',()=>{
+    const headerMenuListItems = document.querySelector('.headerMenuListItems');
+    headerMenuListItems.style.display = headerMenuListItems.style.display  === 'none' ? 'block': 'none';
+})
