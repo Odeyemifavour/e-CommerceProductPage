@@ -1,0 +1,181 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body
+{
+    width: 100vw;
+}
+.pageTop
+{
+    width: 100%;
+    margin: auto;
+    background: rgb(4, 42, 42);
+    padding: 0.8em 0;
+}
+.pageTop .pageTopContent
+{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+}
+.pageTop .pageTopContent .contact
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.pageTop .pageTopContent .contact i
+{
+    padding:  0 0.5em;
+}
+.pageTop .pageTopContent .shop
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+.pageTop .pageTopContent .shop .discount p
+{
+    padding-right: 2em;
+    border-right: 2px solid white;
+    cursor: pointer;
+}
+.pageTop .pageTopContent .shop .discount p a
+{
+    color: white;
+    text-decoration: none;
+}
+.pageTop .pageTopContent .shop .purchase p a
+{
+    text-decoration: none;
+    color: white;
+}
+.pageTop .pageTopContent .locationAndLanguage
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.pageTop .pageTopContent .locationAndLanguage div
+{
+    margin: 0 1em;
+}
+.locationAndLanguage .language
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.locationAndLanguage .language .languageText
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.locationAndLanguage .language .languageText p,  .locationAndLanguage .language .languageText i
+{
+    padding: 0 0.5em;
+}
+.languageList
+{
+    border: 1px solid rgb(93, 92, 92);
+    background: white;
+    top: 30px;
+    border-radius: 5px;
+}
+.languageList ul
+{
+    list-style-type: none;
+    
+}
+.languageList ul li
+{
+    margin: 0.5em 0;
+    color: rgb(93, 92, 92);
+    border-bottom: 1px solid rgb(200, 150, 150);
+    cursor: pointer;
+    padding: 0.4em 1.5em;
+    font-size:13px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.languageList ul li:hover
+{
+    background:rgb(239, 237, 237)
+}
+.languageList ul li:last-child
+{
+    border-bottom: none;
+}
+
+.locationAndLanguage .location
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.locationAndLanguage .location .locationText
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.locationAndLanguage .location .locationText p,  .locationAndLanguage .location .locationText i
+{
+    padding: 0 0.5em;
+}
+.locationList
+{
+    border: 1px solid rgb(93, 92, 92);
+    background: white;
+    top: 30px;
+    border-radius: 5px;
+}
+.locationList ul
+{
+    list-style-type: none;
+    width: 100%;
+}
+.locationList ul li
+{
+    margin: 0.5em 0;
+    color: rgb(93, 92, 92);
+    border-bottom: 1px solid rgb(200, 150, 150);
+    cursor: pointer;
+    padding: 0.4em 1.5em;
+    font-size:13px;
+    text-transform: uppercase;
+   
+    font-weight: bold;
+}
+.locationList ul li:hover
+{
+    background:rgb(239, 237, 237)
+}
+.locationList ul li:last-child
+{
+    border-bottom: none;
+}
+.checkout
+{
+    width: 90%;
+}

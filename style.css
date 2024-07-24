@@ -317,6 +317,11 @@ header{
     align-items: center;
     width:20% ;
 }
+.headerAccountAndCart a
+{
+    color: rgb(54, 53, 53);
+    text-decoration: none;
+}
 .headerAccountAndCart  #account
 {
    

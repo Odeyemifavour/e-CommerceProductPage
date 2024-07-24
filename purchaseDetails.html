@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Details</title>
+    <script src="https://kit.fontawesome.com/6275a7b774.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="purchaseDetails.css">
+</head>
+
+<body>
+    <div class="pageTop">
+        <div class="pageTopContent">
+            <div class="contact">
+                <i class="fa-solid fa-phone" id="contactImg"></i>
+                <p class="contactNo">+001234567890</p>
+            </div>
+            <div class="shop">
+                <div class="discount"><p class="discountText"><a href="">Get 50% Off on Selected Items</a></p></div>
+                <div class="purchase"> <p class="purchaseText"><a href="Shop Now">Shop Now</a></p></div>
+            </div>
+            <div class="locationAndLanguage">
+                <div class="language">
+                    <div class="languageText">
+                        <p class="languageTextContent">Eng</p>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="languageList" style="display: none; position: absolute;">
+                        <ul>
+                            <li>Arabic</li>
+                            <li>Urdu</li>
+                            <li>Bangla</li>
+                            <li>French</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="location">
+                    <div class="locationText">
+                        <p class="locationTextContent">Location</p>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="locationList" style="display: none; position: absolute;">
+                        <ul>
+                            <li>Africa</li>
+                            <li>Darka</li>
+                            <li>USA</li>
+                            <li>India</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header >
+        <div class="headerLogo">
+            <img src="cart LOGO.svg" alt="">
+        </div>
+        <div class="headerMenu">
+            <div class="headerMenuList">
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="headerMenuListItems">
+                    <li class="headerMenuListDropdown">Category  <i class="fa-solid fa-angle-down"></i></li>
+                    <li class="hover">Deals</li>
+                    <li class="hover" >What's New</li>
+                    <li class="hover" >Delivery</li>
+                    <li id="#searchBar"><input type="search" placeholder="Search Product"> <i class="fa-solid fa-magnifying-glass"></i></li>
+                </ul>
+            </div>
+            <div class="headerSubMenuList" style="display: none">
+                <h3>Popular Categories</h3>
+                <div class="items">
+                    <div class="item">
+                        <span class="itemImg"><img src="furniture.png" alt=""></span>
+                        <span class="itemText">
+                            <p class="itemName">furniture</p>
+                            <p class="itemAmount">240 items available</p>
+                        </span>
+                    </div>
+                    <div class="item">
+                        <span class="itemImg"> <img src="bag.png" alt=""></span>
+                        <span class="itemText">
+                            <p class="itemName">Hand Bag</p>
+                            <p  class="itemAmount">240 items available</p>
+                        </span>
+                    </div>
+                    <div class="item">
+                        <span class="itemImg"><img src="shoe.png" alt=""></span>
+                        <span class="itemText">
+                            <p class="itemName">shoe</p>
+                            <p  class="itemAmount">240 items available</p>
+                        </span>
+                    </div>
+                    <div class="item">
+                        <span class="itemImg"><img src="headphone.png" alt=""></span>
+                        <span class="itemText">
+                            <p class="itemName">Headphone</p>
+                            <p  class="itemAmount">240 items available</p>
+                        </span>
+                    </div>
+                    <div class="item">
+                        <span class="itemImg"> <img src="laptop.png" alt=""></span>
+                        <span class="itemText">
+                            <p class="itemName">Laptop</p>
+                            <p  class="itemAmount">240 items available</p>
+                        </span>
+                    </div>
+                    <div class="item">
+                        <span class="itemImg"> <img src="book.png" alt=""></span>
+                        <span class="itemText">
+                            <p class="itemName">Book</p>
+                            <p  class="itemAmount">240 items available</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+      </div>
+        <div class="headerAccountAndCart">
+            <span id="account">
+                <span class="accountIcon"><i class="fa-regular fa-user"></i></span>
+                <span class="accountText">Account</span>
+            </span>
+            <span id="cart">
+                <span class="cartIcon"><i class="fa-solid fa-cart-plus"></i></span>
+                <span class="cartText">Cart</span>
+            </span>
+        </div>
+       
+    </header>
+    <hr style="width: 90%; margin: auto; color: rgb(189, 176, 176) ;">
+    <div class="product-type">
+        <ul class="product-list-type">
+            <li>Electronics /</li>
+            <li>Audio /</li>
+            <li>headphones /</li>
+            <li>shop headphones by types /</li>
+            <li style="font-weight: bold;">airpods-max</li>
+        </ul>
+    </div>
+    <div class="product-purchase-details">
+        <div class="product-img">
+            <div class="product-original-img">
+                <img class="pink-airpod" src="airpods/pink airpods.jpeg" alt="" style="height: 350px;">
+                <img  class="blue-airpod" src="airpods/blue airpods.jpeg" alt="" style="display: none; height: 250px;">
+                <img class="grey-airpod" src="airpods/grey airpods.jpeg" alt="" style="display: none; height: 250px;">
+                <img class="white-airpod" src="airpods/white airpods.jpeg" alt="" style="display: none; height: 300px; width: 700px;">
+                <img class="black-airpod" src="airpods/black airpods.jpeg" alt="" style="display: none; height: 250px;">
+            </div>
+            <div class="product-variety-img">
+                <img class="blue" src="airpods/blue airpods.jpeg" alt="" >
+                <img class="grey" src="airpods/grey airpods.jpeg" alt="">
+                <img class="black" src="airpods/black airpods.jpeg" alt="" >
+                <img class="white" src="airpods/white airpods.jpeg" alt="">
+            </div>
+        </div>
+        <div class="product-purchase-info">
+            <div class="product-details">
+                <h1 class="product-name">Airpods- Max</h1>
+                <p class="product-description"> a perfect balance of exhilarating high-fidelity audio and the effortless magic of airpods</p>
+                <div class="product-rating">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <sup>(200)</sup>
+                </div>
+            </div>
+            <hr style="width: 80%;">
+            <div class="product-pricing">
+                <h3>$549.00 or $99.99/month</h3>
+                <p>suggested payment with 6 months special financing</p>
+            </div>
+            <hr style="width: 80%;">
+            <div class="product-color">
+                <p>choose a color</p>
+                <div class="colors">
+                    <div class="pink-color-airpod" style="background-color: rgb(237, 156, 169);"></div>
+                    <div class="blue-color-airpod" style="background-color:rgb(86, 86, 151) ;"></div>
+                    <div class="grey-color-airpod" style="background-color: grey;"></div>
+                    <div class="black-color-airpod" style="background-color: black;"></div>
+                    <div class="white-color-airpod" style="background-color: white; border: 1px solid grey;"></div>
+                </div>
+            </div>
+            <hr style="width: 80%;">
+            <div class="product-order-amount">
+                <div class="item-amount">
+                    <span class="minus-order">-</span>
+                    <span class="order-num">01</span>
+                    <span class="plus-order">+</span>
+                </div>
+                <div class="item-text">
+                    <p>only <span>12 items</span> left</p>
+                    <p>dont miss it</p>
+                </div>
+            </div>
+            <div class="product-btn">
+                <button><a href="buyNow.html" style="color: white; text-decoration: none;">buy now</a></button>
+                <button>add to cart</button>
+            </div>
+            <div class="delivery-details">
+                <div class="delivery">
+                    <i class="fa-solid fa-truck"></i>
+                    <div>
+                        <p>free delivery</p>
+                        <p><a href="">enter your postal code for delivery availaibility</a></p>
+                    </div>
+                </div>
+                <div class="delivery">
+                    <i class="fa-regular fa-calendar"></i>
+                    <div>
+                        <p>return delivery</p>
+                        <p>free 30days delivery returns. <a href="">Details</a> </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="specifications">
+        <div class="general">
+            <table>
+                <tr>
+                    <th>General</th>
+                </tr>
+                <tr>
+                    <td>brand</td>
+                    <td>apple</td>
+                </tr>
+                <tr>
+                    <td>model</td>
+                    <td>model airpods max wireless headphones</td>
+                </tr>
+                <tr>
+                    <td>price</td>
+                    <td>$549.00</td>
+                </tr>
+                <tr>
+                    <td>release date</td>
+                    <td>december 2020</td>
+                </tr>
+                <tr>
+                    <td>model number</td>
+                    <td>airpods max</td>
+                </tr>
+                <tr>
+                    <td>headphone type</td>
+                    <td>over ear</td>
+                </tr>
+                <tr>
+                    <td>connectivity</td>
+                    <td>wireless</td>
+                </tr>
+            </table>
+        </div>
+        <div class="product-details">
+            <table>
+                <tr>
+                    <th>product details</th>
+                </tr>
+                <tr>
+                    <td>microphone</td>
+                    <td>yes</td>
+                </tr>
+                <tr>
+                    <td>driver type</td>
+                    <td>dynamic</td>
+                </tr>
+                <tr>
+                    <td>driver size (mm)</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>number of drivers</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>water resistant</td>
+                    <td>no</td>
+                </tr>
+                <tr>
+                    <td>weight (g)</td>
+                    <td>385.00</td>
+                </tr>
+                <tr>
+                    <td>battery life</td>
+                    <td>20</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" ></script>
+    <script>
+        $(document).ready(function(){
+            $(".fa-angle-down").click(function()
+        {
+            $(this).toggleClass("fa-angle-down fa-angle-up");
+        })
+        })
+    </script>    
+<script src="script.js"></script> 
+<script src="purchaseDetails.js"></script> 
+</body>
+</html>

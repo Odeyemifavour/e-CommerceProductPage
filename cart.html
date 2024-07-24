@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <script src="https://kit.fontawesome.com/6275a7b774.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cartStyle.css">
+</head>
+
+<body>
+    
+    <header >
+        <div class="headerLogo">
+            <img src="cart LOGO.svg" alt="">
+        </div>
+        <div class="headerMenu">
+            <div class="headerMenuList">
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="headerMenuListItems">
+                    <li class="headerMenuListDropdown">Category  <i class="fa-solid fa-angle-down"></i></li>
+                    <li class="hover">Deals</li>
+                    <li class="hover" >What's New</li>
+                    <li class="hover" >Delivery</li>
+                    <li id="#searchBar"><input type="search" placeholder="Search Product"> <i class="fa-solid fa-magnifying-glass"></i></li>
+                </ul>
+            </div>
+            <div class="headerSubMenuList" style="display: none">
+                <h3>Popular Categories</h3>
+                <div class="items">
+                    <div class="item">
+                        <span class="itemImg"><img src="furniture.png" alt=""></span>
+                        <span class="itemText">
+                            <p class="itemName">furniture</p>
+                            <p class="itemAmount">240 items available</p>
+                        </span>
+                    </div>
+                    <div class="item">
+                        <span class="itemImg"> <img src="bag.png" alt=""></span>
+                        <span class="itemText">
+                            <p class="itemName">Hand Bag</p>
+                            <p  class="itemAmount">240 items available</p>
+                        </span>
+                    </div>
+                    <div class="item">
+                        <span class="itemImg"><img src="shoe.png" alt=""></span>
+                        <span class="itemText">
+                            <p class="itemName">shoe</p>
+                            <p  class="itemAmount">240 items available</p>
+                        </span>
+                    </div>
+                    <div class="item">
+                        <span class="itemImg"><img src="headphone.png" alt=""></span>
+                        <span class="itemText">
+                            <p class="itemName">Headphone</p>
+                            <p  class="itemAmount">240 items available</p>
+                        </span>
+                    </div>
+                    <div class="item">
+                        <span class="itemImg"> <img src="laptop.png" alt=""></span>
+                        <span class="itemText">
+                            <p class="itemName">Laptop</p>
+                            <p  class="itemAmount">240 items available</p>
+                        </span>
+                    </div>
+                    <div class="item">
+                        <span class="itemImg"> <img src="book.png" alt=""></span>
+                        <span class="itemText">
+                            <p class="itemName">Book</p>
+                            <p  class="itemAmount">240 items available</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+      </div>
+        <div class="headerAccountAndCart">
+            <span id="account">
+                <span class="accountIcon"><i class="fa-regular fa-user"></i></span>
+                <span class="accountText">Account</span>
+            </span>
+            <span id="cart">
+                <span class="cartIcon"><i class="fa-solid fa-cart-plus"></i></span>
+                <span class="cartText">Cart</span>
+            </span>
+        </div>
+       
+    </header>
+    <hr style="width: 90%; margin: auto; color: rgb(189, 176, 176) ;">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" ></script>
+    <script>
+        $(document).ready(function(){
+            $(".fa-angle-down").click(function()
+        {
+            $(this).toggleClass("fa-angle-down fa-angle-up");
+        })
+        })
+    </script>    
+<script src="script.js"></script>  
+</body>
+</html>
