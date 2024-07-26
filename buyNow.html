@@ -132,13 +132,97 @@
         </div>
        
     </header>
-    <hr style="width: 90%; margin: auto; color: rgb(189, 176, 176) ;">
 
-    <div class="checkout">
+    <section class="checkout">
         <ul>
-            <li>home/</li>
-            <li>checkout</li>
+            <li>home /</li>
+            <li style="font-weight: 500;">checkout</li>
         </ul>
-    </div>
+    </section>
+   <div class="checkout-details">
+        <div class="checkout-left-col">
+
+            <div class="review-item-and-shipping">
+                <h2 class="review-item-header">review item and shipping</h2>
+                <div class="item-details">
+                   <div class="item-display">
+                     <img class="item-img" src="airpods/pink airpods.jpeg" alt="">
+                     <section class="item-name">
+                        <h2>airpods max</h2>
+                        <p>color: pink</p>
+                     </section>
+                   </div>
+                    <section class="item-price">
+                        <h2>$549.00</h2>
+                        <p>quantity: <span> 01</span></p>
+                    </section>
+                </div>
+            </div>
+
+            <div class="customer-type">
+                <form action="">
+                    <input type="checkbox" id="returning-customer" name="returning-customer" value="">
+                    <label for="returning-customer"> returning customer?</label>
+                </form>
+            </div>
+
+            <div class="delivery-information">
+                <div class="delivery-information-header">
+                    <h2>delivery information</h2>
+                    <button>save information</button>
+                </div>
+                <div class="delivery-information-details">
+                    <form action="">
+                       <div class="name-details">
+                        <section>
+                            <label for="fname">First name*</label><br>
+                            <input type="text" id="fname" name="fname" placeholder="enter firstname">
+                        </section>
+                        <section>
+                            <label for="lname">last name*</label><br>
+                            <input type="text" id="lname" name="lname" placeholder="enter lastname">
+                        </section>
+                       </div>
+                        <section style="width: 100%;">
+                            <label for="address">address*</label><br>
+                            <textarea style="width: 100%; display: inline-flex; resize: none;" name="address" id="address"></textarea>
+                        </section>
+                       <div class="other-details">
+                        <section>
+                            <label for="city">city town*</label><br>
+                            <input type="text" id="city" name="city" placeholder="enter city">
+                        </section>
+                        <section>
+                            <label for="zip">zip code*</label><br>
+                            <input type="tel" id="zip" name="zip" placeholder="enter zip code">
+                        </section>
+                        <section>
+                            <label for="mobile">mobile*</label><br>
+                            <input type="tel" id="mobile" name="mobile" placeholder="telephone here...">
+                        </section>
+                        <section>
+                            <label for="zip">email*</label><br>
+                            <input type="email" id="email" name="email" placeholder="email here...">
+                        </section>
+                       </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="saved-delivery-information">
+                <div class="saved-delivery-information-header">
+                    <h2>delivery information</h2>
+                    <button>edit</button>
+                </div>
+                <div class="saved-delivery-information-details">
+                  <p class="name"> <span class="firstname"></span> <span class="lastname"></span></p>
+                  <p class="address">21, absk estate, ijebu ode, ogun state</p>
+                  <p class="telephone">09110210673</p>
+                  <p class="email">odeyemifavour593@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="checkout-right-col"></div>
+   </div>
 </body>
 </html>

@@ -41,16 +41,29 @@ blueColorAirpod.addEventListener('click',()=>{
     blackAirpod.style.display = "none";
     blueAirpod.style.display = "block";
     blueImage.classList.add('image-hover');
+    whiteImage.classList.remove('image-hover');
+    blackImage.classList.remove('image-hover');
+    greyImage.classList.remove('image-hover');
 })
 
-// blueImage.addEventListener('click',()=>{
-//     blueImage.classList.toggle('image-hover');
-//     pinkAirpod.style.display = "none";
-//     greyAirpod.style.display = "none";
-//     whiteAirpod.style.display = "none";
-//     blackAirpod.style.display = "none";
-//     blueAirpod.style.display = "block";
-// })
+blueImage.addEventListener('click',()=>{
+    blueImage.classList.add('image-hover');
+    greyImage.classList.remove('image-hover');
+    whiteImage.classList.remove('image-hover');
+    blackImage.classList.remove('image-hover');
+
+    blueColorAirpod.classList.add('image-hover');
+    greyColorAirpod.classList.remove('image-hover');
+    whiteColorAirpod.classList.remove('image-hover');
+    pinkColorAirpod.classList.remove('image-hover');
+    blackColorAirpod.classList.remove('image-hover');
+
+    pinkAirpod.style.display = "none";
+    greyAirpod.style.display = "none";
+    whiteAirpod.style.display = "none";
+    blackAirpod.style.display = "none";
+    blueAirpod.style.display = "block";
+})
 
 greyColorAirpod.addEventListener('click',()=>{
     pinkAirpod.style.display = "none";
@@ -58,10 +71,30 @@ greyColorAirpod.addEventListener('click',()=>{
     whiteAirpod.style.display = "none";
     blackAirpod.style.display = "none";
     greyAirpod.style.display = "block";
+
     greyImage.classList.add('image-hover');
     blueImage.classList.remove('image-hover');
     whiteImage.classList.remove('image-hover');
     blackImage.classList.remove('image-hover');
+})
+
+greyImage.addEventListener('click',()=>{
+    greyImage.classList.add('image-hover');
+    blueImage.classList.remove('image-hover');
+    whiteImage.classList.remove('image-hover');
+    blackImage.classList.remove('image-hover');
+
+    greyColorAirpod.classList.toggle('image-hover');
+    blueColorAirpod.classList.remove('image-hover');
+    whiteColorAirpod.classList.remove('image-hover');
+    pinkColorAirpod.classList.remove('image-hover');
+    blackColorAirpod.classList.remove('image-hover');
+
+    greyAirpod.style.display = "block";
+    whiteAirpod.style.display = "none";
+    blackAirpod.style.display = "none";
+    blueAirpod.style.display = "none";
+    pinkAirpod.style.display = "none";
 })
 
 whiteColorAirpod.addEventListener('click',()=>{
@@ -70,10 +103,30 @@ whiteColorAirpod.addEventListener('click',()=>{
     greyAirpod.style.display = "none";
     blackAirpod.style.display = "none";
     whiteAirpod.style.display = "block";
+
     whiteImage.classList.add('image-hover');
     greyImage.classList.remove('image-hover');
     blueImage.classList.remove('image-hover');
     blackImage.classList.remove('image-hover');
+})
+
+whiteImage.addEventListener('click',()=>{
+    whiteImage.classList.add('image-hover');
+    blueImage.classList.remove('image-hover');
+    greyImage.classList.remove('image-hover');
+    blackImage.classList.remove('image-hover');
+
+    whiteColorAirpod.classList.toggle('image-hover');
+    blueColorAirpod.classList.remove('image-hover');
+    greyColorAirpod.classList.remove('image-hover');
+    pinkColorAirpod.classList.remove('image-hover');
+    blackColorAirpod.classList.remove('image-hover');
+
+    whiteAirpod.style.display = "block";
+    greyAirpod.style.display = "none";
+    blackAirpod.style.display = "none";
+    blueAirpod.style.display = "none";
+    pinkAirpod.style.display = "none";
 })
 
 blackColorAirpod.addEventListener('click',()=>{
@@ -86,6 +139,25 @@ blackColorAirpod.addEventListener('click',()=>{
     greyImage.classList.remove('image-hover');
     blueImage.classList.remove('image-hover');
     whiteImage.classList.remove('image-hover');
+})
+
+blackImage.addEventListener('click',()=>{
+    blackImage.classList.add('image-hover');
+    blueImage.classList.remove('image-hover');
+    whiteImage.classList.remove('image-hover');
+    greyImage.classList.remove('image-hover');
+
+    blackColorAirpod.classList.toggle('image-hover');
+    blueColorAirpod.classList.remove('image-hover');
+    whiteColorAirpod.classList.remove('image-hover');
+    pinkColorAirpod.classList.remove('image-hover');
+    greyColorAirpod.classList.remove('image-hover');
+
+    blackAirpod.style.display = "block";
+    whiteAirpod.style.display = "none";
+    greyAirpod.style.display = "none";
+    blueAirpod.style.display = "none";
+    pinkAirpod.style.display = "none";
 })
 pinkColorAirpod.addEventListener('click',()=>{
     greyAirpod.style.display = "none";

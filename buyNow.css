@@ -178,4 +178,188 @@ body
 .checkout
 {
     width: 90%;
+    margin: auto;
+}
+.checkout ul
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.checkout ul li
+{
+    list-style-type: none;
+    font-size: 14px;
+    text-transform: capitalize;
+    padding-right: 10px;
+}
+.checkout-details
+{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 2em 0;
+    gap: 40px;
+}
+.checkout-left-col
+{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.review-item-and-shipping
+{
+    border: 1px solid rgb(208, 203, 203);
+    padding: 10px;
+    border-radius: 10px;
+}
+.review-item-header
+{
+    text-transform: capitalize;
+    font-weight: 600;
+    color: rgb(40, 38, 38);
+}
+.item-details
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.item-display
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.item-display .item-img
+{
+    margin-right: 2em;
+}
+.item-details section h2
+{
+    text-transform: capitalize;
+    color: rgb(40, 38, 38);
+}
+.item-details section p 
+{
+    text-transform: capitalize;
+}
+.checkout-right-col
+{
+    width: 30%;
+}
+.customer-type
+{
+    margin: 2em 0;
+    display: flex;
+    text-transform: capitalize;
+}
+.delivery-information
+{
+    border: 1px solid rgb(208, 203, 203);
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+.delivery-information-header
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.delivery-information-header h2
+{
+    text-transform: capitalize;
+    font-weight: 600;
+    color: rgb(40, 38, 38);
+}
+.delivery-information-header button
+{
+    background: rgb(234, 231, 231);
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
+    text-transform: capitalize;
+    color: rgb(40, 38, 38);
+    font-weight: 500;
+    cursor: pointer;
+    width: 150px;
+}
+.delivery-information-details
+{
+    width: 100%;
+    margin: 2em 0;
+}
+.name-details,.other-details
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+.delivery-information-details form section 
+{
+    margin: 0.2em 0;
+}
+.delivery-information-details form section label
+{
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.delivery-information-details form section input, section textarea
+{
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid rgb(208, 203, 203);
+    background: transparent;
+    margin: 0.5em 0;
+}
+input::placeholder
+{
+    padding-left: 20px;
+}
+.saved-delivery-information
+{
+    border: 1px solid rgb(208, 203, 203);
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    margin: 2em 0;
+}
+.saved-delivery-information-header
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.saved-delivery-information-header h2
+{
+    text-transform: capitalize;
+    font-weight: 600;
+    color: rgb(40, 38, 38);
+}
+.saved-delivery-information-header button
+{
+    background: rgb(234, 231, 231);
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
+    text-transform: capitalize;
+    color: rgb(40, 38, 38);
+    font-weight: 500;
+    cursor: pointer;
+    width: 100px;
+}
+.saved-delivery-information-details
+{
+    margin: 2em 0;
+}
+.saved-delivery-information-details p
+{
+    margin: 0.5em 0;
+    font-size: 14px;
 }
