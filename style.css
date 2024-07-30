@@ -368,7 +368,7 @@ header  .hamburger:hover
 {
     width: 100%;
     margin: auto;
-    background: url('backgroundStage.png');
+    background: url('images/backgroundStage.png');
     background-position: center;
     background-size: cover;
     background-color: rgb(196, 232, 220);
@@ -514,42 +514,42 @@ header  .hamburger:hover
 
 #categories a .furniture
 {
-    background-image: url('category\ furniture.png');
+    background-image: url('images/category\ furniture.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 #categories a .handbag
 {
-     background-image: url('category\ handbag.png');
+     background-image: url('images/category\ handbag.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 #categories a .books
 {
-     background-image: url('category\ books.png');
+     background-image: url('images/category\ books.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 #categories a .tech
 {
-     background-image: url('category\ tech.png');
+     background-image: url('images/category\ tech.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 #categories a .sneakers
 {
-     background-image: url('category\ sneakers.png');
+     background-image: url('images/category\ sneakers.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 #categories a .travel
 {
-     background-image: url('category\ travel.png');
+     background-image: url('images/category\ travel.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1054,7 +1054,7 @@ header  .hamburger:hover
 #cashBackDiscount
 {
     width: 100%;
-    background: url('discountBanner.png');
+    background: url('images/discountBanner.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1480,7 +1480,7 @@ header  .hamburger:hover
 }
 .trendingProductDisplay .furnitureVillage .furnitureVillageImg
 {
-    background: url('furniture\ village.png');
+    background: url('images/furniture\ village.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1494,7 +1494,7 @@ header  .hamburger:hover
 }
 .trendingProductDisplay .fashionWorld .fashionWorldImg
 {
-    background: url('fashion\ world.png');
+    background: url('images/fashion\ world.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
