@@ -100,3 +100,61 @@ hamburger.addEventListener('click',()=>{
     const headerMenuListItems = document.querySelector('.headerMenuListItems');
     headerMenuListItems.style.display = headerMenuListItems.style.display  === 'none' ? 'block': 'none';
 })
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetchCategories();
+    fetchProducts();
+    fetchProductNotFound();
+});
+
+async function fetchCategories() {
+    try {
+        const response = await fetch("https://shopcart-0q3t.onrender.com/api/categories");
+        const categories = await response.json();
+        console.log(categories);
+        
+        const categoryNames = [];
+        for (let i = 0; i < categories.length; i++) {
+            categoryNames.push(categories[i]);
+        }
+        bestDealBtnName(categoryNames);
+        AOS.init();
+        
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+
+async function fetchProducts() {
+    try {
+        const response = await fetch("https://shopcart-0q3t.onrender.com/api/products");
+        const data = await response.json();
+        console.log(data);
+        AOS.init();
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+async function fetchProductNotFound() {
+    try {
+        const response = await fetch("https://shopcart-0q3t.onrender.com/api/products/:id");
+        const data = await response.json();
+        console.log(data);
+        AOS.init();
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+const bestDealBtns = document.querySelector('.bestDealBtn');
+
+function bestDealBtnName(names) {
+    for (let i = 0; i < names.length; i++) {
+        const button = document.createElement('button');
+        button.textContent = names[i];
+        bestDealBtns.appendChild(button);
+    }
+}
+

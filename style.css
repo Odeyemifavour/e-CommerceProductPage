@@ -667,6 +667,7 @@ header  .hamburger:hover
     border-radius: 20px;
     text-transform: capitalize;
     animation: fadeIn 5s ease-in-out forwards;
+
 }
 #bestDeals .deals .deal .dealItemAddToCart  button:hover
 {
@@ -1129,13 +1130,19 @@ header  .hamburger:hover
     text-transform: capitalize;
     margin: 1em 0;
 }
+#bestDeal .bestDealBtn
+{
+    display: flex;
+    flex-direction: row;
+   
+}
 #bestDeal .bestDealBtn button
 {
     text-transform: capitalize;
     padding: 10px;
     background: none;
     border-radius: 30px;
-    width: 100px;
+    width: 140px;
     margin-right: 0.8em;
     border: 1px solid rgb(138, 135, 135);
     cursor: pointer;
