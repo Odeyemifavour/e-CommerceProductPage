@@ -419,6 +419,10 @@ body
    margin-right: 10px;
     color: rgb(242, 101, 40);
 }
+.product-rating i
+{
+    cursor: pointer;
+}
 .specifications
 {
     display: flex;
@@ -466,3 +470,11 @@ body
   {
     border: 2px solid rgb(4, 42, 42);
   }
+  .markImportant
+{
+    color: #077d55;
+}
+.unMarkImportant
+{
+    display: none;
+}

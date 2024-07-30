@@ -171,6 +171,17 @@ pinkColorAirpod.addEventListener('click',()=>{
     blackImage.classList.remove('image-hover');
 })
 
+document.addEventListener('DOMContentLoaded', () => {
+    const stars = document.querySelectorAll(' .product-rating .fa-star');
+
+    stars.forEach(star => {
+        star.addEventListener('click', () => {
+            star.classList.toggle('fa-regular');
+            star.classList.toggle('fa-solid');
+            star.classList.toggle('markImportant');
+        });
+    });
+});
 
 
 
