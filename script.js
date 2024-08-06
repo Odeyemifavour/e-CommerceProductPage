@@ -101,18 +101,21 @@ hamburger.addEventListener('click',()=>{
     headerMenuListItems.style.display = headerMenuListItems.style.display  === 'none' ? 'block': 'none';
 })
 
+
 document.addEventListener('DOMContentLoaded', () => {
     fetchCategories();
     fetchProducts();
     fetchProductNotFound();
 });
 
+let allProducts = []; // To store all products for filtering
+
 async function fetchCategories() {
     try {
         const response = await fetch("https://shopcart-0q3t.onrender.com/api/categories");
         const categories = await response.json();
         console.log(categories);
-        
+
         const categoryNames = [];
         for (let i = 0; i < categories.length; i++) {
             categoryNames.push(categories[i]);
@@ -125,16 +128,74 @@ async function fetchCategories() {
     }
 }
 
+const bestDealBtns = document.querySelector('.bestDealBtn');
+
+function bestDealBtnName(names) {
+    for (let i = 0; i < names.length; i++) {
+        const button = document.createElement('button');
+        button.textContent = names[i];
+        button.addEventListener('click', () => filterProductsByCategory(names[i]));
+        bestDealBtns.appendChild(button);
+    }
+}
 
 async function fetchProducts() {
     try {
         const response = await fetch("https://shopcart-0q3t.onrender.com/api/products");
-        const data = await response.json();
-        console.log(data);
+        const products = await response.json();
+        console.log(products);
+
+        allProducts = products; 
+        createProducts(products);
         AOS.init();
     } catch (error) {
         console.error(error);
     }
+}
+
+function createProducts(productItems) {
+    const bestDealItemsSection = document.querySelector('.bestDealItems');
+    bestDealItemsSection.innerHTML = '';
+    productItems.forEach(productItem => {
+        const dealItem = document.createElement('div');
+        dealItem.classList.add('dealItem');
+
+        dealItem.innerHTML = `
+               <div class="dealItemDisplay">
+                <div class="markDealItemAsFavorite">
+                    <i class="fa-regular fa-heart unMark"></i>
+                    <i class="fa-solid fa-heart mark" style="display: none"></i>
+                </div>
+                <div class="ItemImg">
+                    <img src="${productItem.images[0]}" alt="${productItem.name}">
+                </div>
+            </div>
+            <div class="dealItemDispalyInfo">
+                <span class="dealitemInfoNameAndPrice">
+                    <p class="dealItemDisplayName">${productItem.name}</p>
+                    <p class="dealItemDisplayPrice"><sup>$</sup><span class="dealItemDisplayPriceAmnt">${productItem.price}</span><sup>.00</sup></p>
+                </span>
+                <p class="dealItemDispalyDescription">${productItem.description}</p>
+                <span class="rating">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <sup>(${productItem.reviews})</sup>
+                </span>
+            </div>
+            <div class="dealItemAddToCart">
+                <button>add to cart</button>
+            </div>
+        `;
+        bestDealItemsSection.appendChild(dealItem);
+    });
+}
+
+function filterProductsByCategory(category) {
+    const filteredProducts = allProducts.filter(product => product.category === category);
+    createProducts(filteredProducts);
 }
 
 async function fetchProductNotFound() {
@@ -147,14 +208,3 @@ async function fetchProductNotFound() {
         console.error(error);
     }
 }
-
-const bestDealBtns = document.querySelector('.bestDealBtn');
-
-function bestDealBtnName(names) {
-    for (let i = 0; i < names.length; i++) {
-        const button = document.createElement('button');
-        button.textContent = names[i];
-        bestDealBtns.appendChild(button);
-    }
-}
-

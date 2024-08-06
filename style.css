@@ -1061,7 +1061,7 @@ header  .hamburger:hover
     background-position: center;
     background-repeat: no-repeat;
     height: 700px;
-    transition: 1s;
+    transition: 2s;
 }
 #cashBackDiscount:hover
 {
@@ -1158,11 +1158,10 @@ header  .hamburger:hover
 }
 #bestDeal .bestDealItems
 {
-   
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto auto auto;
     margin: auto;
-    gap: 10px;
+    gap: 30px;
     padding: 2em 0;
     justify-content: space-around;
 }
@@ -1171,8 +1170,9 @@ header  .hamburger:hover
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    padding: 1em 0;
+    padding: 0.3em 0;
     border-top-right-radius: 20px;
+    width: 80%;
 }
 #bestDeal .bestDealItems .dealItem .dealItemDisplay
 {
@@ -1182,6 +1182,8 @@ header  .hamburger:hover
     justify-content: center;
     gap: 5px;
     border-radius: 20px;
+    height: 200px;
+
 }
 #bestDeal .bestDealItems .dealItem .dealItemDisplay .markDealItemAsFavorite
 {
@@ -1190,15 +1192,23 @@ header  .hamburger:hover
 #bestDeal .bestDealItems .dealItem .dealItemDisplay .markDealItemAsFavorite i
 {
     float: right;
-    margin: 0.5em 0.5em;
+    margin: 0em 0.9em;
     cursor: pointer;
     font-size: 20px;
     background-color: whitesmoke;
+}
+#bestDeal .bestDealItems .dealItem .dealItemDisplay .ItemImg
+{
+    display:flex;
+    justify-content: center;
+
 }
 #bestDeal .bestDealItems .dealItem .dealItemDisplay .ItemImg img
 {
     transition: 1s;
     cursor: pointer;
+    width:150px;
+    height:150px
 }
 #bestDeal .bestDealItems .dealItem .dealItemDisplay .ItemImg img:hover
 {
