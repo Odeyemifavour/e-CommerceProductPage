@@ -83,24 +83,6 @@ markAsFavorites.forEach(markAsFavourite => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const stars = document.querySelectorAll(' .rating i');
-
-    stars.forEach(star => {
-        star.addEventListener('click', () => {
-            star.classList.toggle('fa-regular');
-            star.classList.toggle('fa-solid');
-            star.classList.toggle('markImportant');
-        });
-    });
-});
-
-const hamburger = document.querySelector('.hamburger');
-hamburger.addEventListener('click',()=>{
-    const headerMenuListItems = document.querySelector('.headerMenuListItems');
-    headerMenuListItems.style.display = headerMenuListItems.style.display  === 'none' ? 'block': 'none';
-})
-
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchCategories();
@@ -109,6 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 let allProducts = [];
+let selectedCategories = [];
+
 async function fetchCategories() {
     try {
         const response = await fetch("https://shopcart-0q3t.onrender.com/api/categories");
@@ -121,7 +105,6 @@ async function fetchCategories() {
         }
         bestDealBtnName(categoryNames);
         AOS.init();
-        
     } catch (error) {
         console.error(error);
     }
@@ -130,13 +113,43 @@ async function fetchCategories() {
 const bestDealBtns = document.querySelector('.bestDealBtn');
 
 function bestDealBtnName(names) {
-    for (let i = 0; i < names.length; i++) {
+    bestDealBtns.innerHTML = '';  
+    names.forEach(name => {
         const button = document.createElement('button');
-        button.textContent = names[i];
-        button.addEventListener('click', () => filterProductsByCategory(names[i]));
+        button.textContent = name;
+        button.classList.add('category-btn'); 
+        button.addEventListener('click', () => buttonClick(button, name));
         bestDealBtns.appendChild(button);
+    });
+}
+
+function buttonClick(clickedButton, category) {
+    clickedButton.classList.toggle('btn-click');
+    if (selectedCategories.includes(category)) {
+        selectedCategories = selectedCategories.filter(cat => cat !== category);
+    } else {
+        selectedCategories.push(category);
+    }
+    filterProductsByCategories();
+}
+
+function filterProductsByCategories() {
+    if (selectedCategories.length === 0) {
+        createProducts(allProducts);
+    } else {
+        const filteredProducts = allProducts.filter(product =>
+            selectedCategories.includes(product.category)
+        );
+        createProducts(filteredProducts);
     }
 }
+
+// function filterProductsByCategory(category) {
+//     const filteredProducts = allProducts.filter(product =>
+//         product.category === category
+//     );
+//     createProducts(filteredProducts);
+// }
 
 async function fetchProducts() {
     try {
@@ -146,6 +159,7 @@ async function fetchProducts() {
 
         allProducts = products; 
         createProducts(products);
+        filterProductsByCategories();
         AOS.init();
     } catch (error) {
         console.error(error);
@@ -189,6 +203,7 @@ function createProducts(productItems) {
             </div>
         `;
         bestDealItemsSection.appendChild(dealItem);
+
         const unMarkAsFavourite = dealItem.querySelector('.unMark');
         const markAsFavourite = dealItem.querySelector('.mark');
         
@@ -206,7 +221,7 @@ function createProducts(productItems) {
             unMarkAsFavourite.classList.remove('unMarkFavourite');
         });
 
-        const stars = dealItem.querySelectorAll(' .rating i');
+        const stars = dealItem.querySelectorAll('.rating i');
 
         stars.forEach(star => {
             star.addEventListener('click', () => {
@@ -218,10 +233,6 @@ function createProducts(productItems) {
     });
 }
 
-function filterProductsByCategory(category) {
-    const filteredProducts = allProducts.filter(product => product.category === category);
-    createProducts(filteredProducts);
-}
 
 async function fetchProductNotFound() {
     try {

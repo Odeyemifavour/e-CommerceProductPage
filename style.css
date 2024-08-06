@@ -1138,7 +1138,7 @@ header  .hamburger:hover
     flex-direction: row;
    
 }
-#bestDeal .bestDealBtn button
+/* #bestDeal .bestDealBtn button
 {
     text-transform: capitalize;
     padding: 10px;
@@ -1150,12 +1150,12 @@ header  .hamburger:hover
     cursor: pointer;
     transition: 1s;
     font-weight: 500;
-}
-#bestDeal .bestDealBtn button:hover
+} */
+/* .btn-click
 {
     background-color: rgb(4, 42, 42);
     color: white;
-}
+} */
 #bestDeal .bestDealItems
 {
     display: grid;
@@ -1854,6 +1854,24 @@ footer .footerBottom  section p:hover
 {
     display: none;
 }
+.category-btn {
+    text-transform: capitalize;
+    padding: 10px;
+    background: none;
+    border-radius: 30px;
+    width: 140px;
+    margin-right: 0.8em;
+    border: 1px solid rgb(138, 135, 135);
+    cursor: pointer;
+    transition: 1s;
+    font-weight: 500;
+}
+
+.category-btn.btn-click {
+    background-color: rgb(4, 42, 42);  /* Active button color */
+    color: white;  /* Active text color */
+}
+
 
 
 @media (min-width: 320px) and (max-width: 480px){
