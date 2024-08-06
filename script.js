@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchProductNotFound();
 });
 
-let allProducts = []; // To store all products for filtering
+let allProducts = [];
 
 async function fetchCategories() {
     try {
