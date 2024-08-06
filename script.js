@@ -126,7 +126,7 @@ function bestDealBtnName(names) {
 function buttonClick(clickedButton, category) {
     clickedButton.classList.toggle('btn-click');
     if (selectedCategories.includes(category)) {
-        selectedCategories = selectedCategories.filter(cat => cat !== category);
+        selectedCategories = selectedCategories.filter(selectedCategory => selectedCategory !== category);
     } else {
         selectedCategories.push(category);
     }
