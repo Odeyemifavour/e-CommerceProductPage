@@ -109,7 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 let allProducts = [];
-
 async function fetchCategories() {
     try {
         const response = await fetch("https://shopcart-0q3t.onrender.com/api/categories");
@@ -190,6 +189,32 @@ function createProducts(productItems) {
             </div>
         `;
         bestDealItemsSection.appendChild(dealItem);
+        const unMarkAsFavourite = dealItem.querySelector('.unMark');
+        const markAsFavourite = dealItem.querySelector('.mark');
+        
+        unMarkAsFavourite.addEventListener('click', () => {
+            unMarkAsFavourite.style.display = 'none';
+            markAsFavourite.style.display = 'block';
+            markAsFavourite.classList.add('markfavourite');
+            unMarkAsFavourite.classList.add('unMarkFavourite');
+        });
+
+        markAsFavourite.addEventListener('click', () => {
+            markAsFavourite.style.display = 'none';
+            unMarkAsFavourite.style.display = 'block';
+            markAsFavourite.classList.remove('markfavourite');
+            unMarkAsFavourite.classList.remove('unMarkFavourite');
+        });
+
+        const stars = dealItem.querySelectorAll(' .rating i');
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                star.classList.toggle('fa-regular');
+                star.classList.toggle('fa-solid');
+                star.classList.toggle('markImportant');
+            });
+        });
     });
 }
 
