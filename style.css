@@ -607,6 +607,11 @@ header  .hamburger:hover
     font-size: 20px;
     background-color: whitesmoke;
 }
+#bestDeals .deals .deal  .dealItemDisplay .dealItemImg 
+{
+    display: flex;
+    justify-content: center;
+}
 #bestDeals .deals .deal  .dealItemDisplay .dealItemImg img
 {
     transition: 1s;
