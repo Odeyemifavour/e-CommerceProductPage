@@ -183,6 +183,75 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// async function fetchProducts() {
+//     try {
+//         const response = await fetch("https://shopcart-0q3t.onrender.com/api/products");
+//         const products = await response.json();
+//         console.log(products);
+
+//         allProducts = products; 
+//         createProducts(products);
+//         filterProductsByCategories();
+//         AOS.init();
+//     } catch (error) {
+//         console.error(error);
+//     }
+// }
+
+async function fetchProductDetails(id) {
+    try {
+        const response = await fetch(`https://shopcart-0q3t.onrender.com/api/products/${id}`);
+        const product = await response.json();
+        displayProductDetails(product);
+    } catch (error) {
+        console.error('Error fetching product details:', error);
+    }
+}
 
 
+function displayProductDetails(product) {
+    const productListType = document.querySelector('.product-list-type');
+    productListType.innerHTML = `
+        <li>Electronics /</li>
+        <li>furniture /</li>
+        <li>sports /</li>
+        <li>home & kitchen /</li>
+        <li style="font-weight: bold;">${product.subcategory}</li>
+    `;
 
+
+    const productOriginalImg = document.querySelector('.product-original-img');
+    productOriginalImg.innerHTML = product.images.map((img, index) => 
+        `<img class="${index === 0 ? 'pink-airpod' : ''}" src="${img}" alt="" style="${index === 0 ? 'height: 350px; width: 300px;' : 'display: none; height: 250px; width: 300px;'}">`
+    ).join('');
+
+    const productVarietyImg = document.querySelector('.product-variety-img');
+    productVarietyImg.innerHTML = product.images.slice(0, 4).map((img, index) => 
+        `<img class="${['blue', 'grey', 'black', 'white'][index]}" src="${img}" alt="">`
+    ).join('');
+
+
+    document.querySelector('.product-name').textContent = product.name;
+    document.querySelector('.product-description').textContent = product.description;
+    document.querySelector('.product-rating sup').textContent = `(${product.reviews})`;
+
+    document.querySelector('.product-pricing h3').textContent = `$${product.price.toFixed(2)} or $${(product.price / 6).toFixed(2)}/month`;
+
+    const generalTable = document.querySelector('.general table');
+    generalTable.innerHTML = `
+        <tr><th>General</th></tr>
+        <tr><td>brand</td><td>${product.brand}</td></tr>
+        <tr><td>model</td><td>${product.name}</td></tr>
+        <tr><td>price</td><td>$${product.price.toFixed(2)}</td></tr>
+        <tr><td>in stock</td><td>${product.inStock ? 'Yes' : 'No'}</td></tr>
+        <tr><td>subcategory</td><td>${product.subcategory}</td></tr>
+    `;
+
+    const productDetailsTable = document.querySelector('.product-details table');
+    productDetailsTable.innerHTML = `
+        <tr><th>Specifications</th></tr>
+        ${Object.entries(product.specifications).map(([key, value]) => 
+            `<tr><td>${key}</td><td>${value}</td></tr>`
+        ).join('')}
+    `;
+}

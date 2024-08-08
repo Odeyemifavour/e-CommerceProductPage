@@ -87,7 +87,6 @@ markAsFavorites.forEach(markAsFavourite => {
 document.addEventListener('DOMContentLoaded', () => {
     fetchCategories();
     fetchProducts();
-    fetchProductNotFound();
 });
 
 let allProducts = [];
@@ -180,7 +179,7 @@ function createProducts(productItems) {
                     <i class="fa-solid fa-heart mark" style="display: none"></i>
                 </div>
                 <div class="ItemImg">
-                    <img src="${productItem.images[0]}" alt="${productItem.name}" onclick="fetchProductNotFound(${productItem.id})">
+                    <img src="${productItem.images[0]}" alt="${productItem.name}" onclick="purchaseDetails(${productItem.id})">
                 </div>
             </div>
             <div class="dealItemDispalyInfo">
@@ -234,7 +233,8 @@ function createProducts(productItems) {
 }
 
 
-async function fetchProductNotFound(id) {
+async function purchaseDetails(id) {
+    window.location.href = "purchaseDetails.html";
     try {
         const response = await fetch(`https://shopcart-0q3t.onrender.com/api/products/${id}`);
         const data = await response.json();
