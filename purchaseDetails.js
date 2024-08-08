@@ -1,188 +1,3 @@
-const plusOrder = document.querySelector('.plus-order');
-const minusOrder = document.querySelector('.minus-order');
-const orderNumber  = document.querySelector('.order-num');
-
-let a = 1;
-plusOrder.addEventListener('click', ()=>{
-    a++;
-    a =(a< 10) ? "0" + a : a;
-    orderNumber.innerText = a;
-});
-
-minusOrder.addEventListener('click',()=>{
-    if(a > 1){
-        a--;
-        a = (a <10 ) ? "0" + a : a;
-        orderNumber.innerText = a;
-    }
-});
-
-const blueColorAirpod = document.querySelector('.blue-color-airpod');
-const greyColorAirpod = document.querySelector('.grey-color-airpod');
-const whiteColorAirpod = document.querySelector('.white-color-airpod');
-const blackColorAirpod = document.querySelector('.black-color-airpod');
-const pinkColorAirpod = document.querySelector('.pink-color-airpod');
-
-const blueAirpod = document.querySelector('.blue-airpod');
-const greyAirpod = document.querySelector('.grey-airpod');
-const whiteAirpod = document.querySelector('.white-airpod');
-const blackAirpod = document.querySelector('.black-airpod');
-const pinkAirpod = document.querySelector('.pink-airpod');
-
-const blueImage = document.querySelector('.blue');
-const greyImage = document.querySelector('.grey');
-const whiteImage = document.querySelector('.white');
-const blackImage = document.querySelector('.black');
-
-blueColorAirpod.addEventListener('click',()=>{
-    pinkAirpod.style.display = "none";
-    greyAirpod.style.display = "none";
-    whiteAirpod.style.display = "none";
-    blackAirpod.style.display = "none";
-    blueAirpod.style.display = "block";
-    blueImage.classList.add('image-hover');
-    whiteImage.classList.remove('image-hover');
-    blackImage.classList.remove('image-hover');
-    greyImage.classList.remove('image-hover');
-})
-
-blueImage.addEventListener('click',()=>{
-    blueImage.classList.add('image-hover');
-    greyImage.classList.remove('image-hover');
-    whiteImage.classList.remove('image-hover');
-    blackImage.classList.remove('image-hover');
-
-    blueColorAirpod.classList.add('image-hover');
-    greyColorAirpod.classList.remove('image-hover');
-    whiteColorAirpod.classList.remove('image-hover');
-    pinkColorAirpod.classList.remove('image-hover');
-    blackColorAirpod.classList.remove('image-hover');
-
-    pinkAirpod.style.display = "none";
-    greyAirpod.style.display = "none";
-    whiteAirpod.style.display = "none";
-    blackAirpod.style.display = "none";
-    blueAirpod.style.display = "block";
-})
-
-greyColorAirpod.addEventListener('click',()=>{
-    pinkAirpod.style.display = "none";
-    blueAirpod.style.display = "none";
-    whiteAirpod.style.display = "none";
-    blackAirpod.style.display = "none";
-    greyAirpod.style.display = "block";
-
-    greyImage.classList.add('image-hover');
-    blueImage.classList.remove('image-hover');
-    whiteImage.classList.remove('image-hover');
-    blackImage.classList.remove('image-hover');
-})
-
-greyImage.addEventListener('click',()=>{
-    greyImage.classList.add('image-hover');
-    blueImage.classList.remove('image-hover');
-    whiteImage.classList.remove('image-hover');
-    blackImage.classList.remove('image-hover');
-
-    greyColorAirpod.classList.toggle('image-hover');
-    blueColorAirpod.classList.remove('image-hover');
-    whiteColorAirpod.classList.remove('image-hover');
-    pinkColorAirpod.classList.remove('image-hover');
-    blackColorAirpod.classList.remove('image-hover');
-
-    greyAirpod.style.display = "block";
-    whiteAirpod.style.display = "none";
-    blackAirpod.style.display = "none";
-    blueAirpod.style.display = "none";
-    pinkAirpod.style.display = "none";
-})
-
-whiteColorAirpod.addEventListener('click',()=>{
-    pinkAirpod.style.display = "none";
-    blueAirpod.style.display = "none";
-    greyAirpod.style.display = "none";
-    blackAirpod.style.display = "none";
-    whiteAirpod.style.display = "block";
-
-    whiteImage.classList.add('image-hover');
-    greyImage.classList.remove('image-hover');
-    blueImage.classList.remove('image-hover');
-    blackImage.classList.remove('image-hover');
-})
-
-whiteImage.addEventListener('click',()=>{
-    whiteImage.classList.add('image-hover');
-    blueImage.classList.remove('image-hover');
-    greyImage.classList.remove('image-hover');
-    blackImage.classList.remove('image-hover');
-
-    whiteColorAirpod.classList.toggle('image-hover');
-    blueColorAirpod.classList.remove('image-hover');
-    greyColorAirpod.classList.remove('image-hover');
-    pinkColorAirpod.classList.remove('image-hover');
-    blackColorAirpod.classList.remove('image-hover');
-
-    whiteAirpod.style.display = "block";
-    greyAirpod.style.display = "none";
-    blackAirpod.style.display = "none";
-    blueAirpod.style.display = "none";
-    pinkAirpod.style.display = "none";
-})
-
-blackColorAirpod.addEventListener('click',()=>{
-    pinkAirpod.style.display = "none";
-    blueAirpod.style.display = "none";
-    whiteAirpod.style.display = "none";
-    greyAirpod.style.display = "none";
-    blackAirpod.style.display = "block";
-    blackImage.classList.add('image-hover');
-    greyImage.classList.remove('image-hover');
-    blueImage.classList.remove('image-hover');
-    whiteImage.classList.remove('image-hover');
-})
-
-blackImage.addEventListener('click',()=>{
-    blackImage.classList.add('image-hover');
-    blueImage.classList.remove('image-hover');
-    whiteImage.classList.remove('image-hover');
-    greyImage.classList.remove('image-hover');
-
-    blackColorAirpod.classList.toggle('image-hover');
-    blueColorAirpod.classList.remove('image-hover');
-    whiteColorAirpod.classList.remove('image-hover');
-    pinkColorAirpod.classList.remove('image-hover');
-    greyColorAirpod.classList.remove('image-hover');
-
-    blackAirpod.style.display = "block";
-    whiteAirpod.style.display = "none";
-    greyAirpod.style.display = "none";
-    blueAirpod.style.display = "none";
-    pinkAirpod.style.display = "none";
-})
-pinkColorAirpod.addEventListener('click',()=>{
-    greyAirpod.style.display = "none";
-    blueAirpod.style.display = "none";
-    whiteAirpod.style.display = "none";
-    blackAirpod.style.display = "none";
-    pinkAirpod.style.display = "block";
-    whiteImage.classList.remove('image-hover');
-    greyImage.classList.remove('image-hover');
-    blueImage.classList.remove('image-hover');
-    blackImage.classList.remove('image-hover');
-})
-
-document.addEventListener('DOMContentLoaded', () => {
-    const stars = document.querySelectorAll(' .product-rating .fa-star');
-
-    stars.forEach(star => {
-        star.addEventListener('click', () => {
-            star.classList.toggle('fa-regular');
-            star.classList.toggle('fa-solid');
-            star.classList.toggle('markImportant');
-        });
-    });
-});
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -195,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 async function fetchAndDisplayProductDetails(id) {
+    console.log("hello")
     try {
         const response = await fetch(`https://shopcart-0q3t.onrender.com/api/products/${id}`);
         const product = await response.json();
@@ -204,55 +20,154 @@ async function fetchAndDisplayProductDetails(id) {
     }
 }
 
-
-
-
 function displayProductDetails(product) {
-    const productPurchaseDetails = document.querySelector('.product-purchase-details');
     
     const productListType = document.querySelector('.product-list-type');
-    productListType.innerHTML = `
-        <li>Electronics /</li>
-        <li>furniture /</li>
-        <li>sports /</li>
-        <li>home & kitchen /</li>
-         <li style="font-weight: bold;">${product.category} /</li>
-        <li style="font-weight: bold;">${product.subcategory}</li>
-    `;
 
+    const specifications = document.querySelector('.specifications');
+    console.log({specifications})
+    const productListType2 = document.querySelector('.specifications');
+    console.log({productListType2})
 
-    const productOriginalImg = document.querySelector('.product-original-img');
-    productOriginalImg.innerHTML = product.images.map((img, index) => 
-        `<img class="${index === 0 ? 'pink-airpod' : ''}" src="${img}" alt="" style="${index === 0 ? 'height: 350px; width: 300px;' : 'display: none; height: 250px; width: 300px;'}">`
-    ).join('');
-
-    const productVarietyImg = document.querySelector('.product-variety-img');
-    productVarietyImg.innerHTML = product.images.slice(0, 4).map((img, index) => 
-        `<img class="${['blue', 'grey', 'black', 'white'][index]}" src="${img}" alt="">`
-    ).join('');
-
-
-    document.querySelector('.product-name').textContent = product.name;
-    document.querySelector('.product-description').textContent = product.description;
-    document.querySelector('.product-rating sup').textContent = `(${product.reviews})`;
-
-    document.querySelector('.product-pricing h3').textContent = `$${product.price.toFixed(2)} or $${(product.price / 6).toFixed(2)}/month`;
-
-    const generalTable = document.querySelector('.general table');
-    generalTable.innerHTML = `
+    const generalTable = document.createElement('div');
+    generalTable.classList.add('general');
+    productListType2.innerHTML = `
+        <table>   
         <tr><th>General</th></tr>
         <tr><td>brand</td><td>${product.brand}</td></tr>
         <tr><td>model</td><td>${product.name}</td></tr>
         <tr><td>price</td><td>$${product.price.toFixed(2)}</td></tr>
         <tr><td>in stock</td><td>${product.inStock ? 'Yes' : 'No'}</td></tr>
         <tr><td>subcategory</td><td>${product.subcategory}</td></tr>
+        </table>
+    `
+    specifications.appendChild(generalTable);
+   
+    productListType.innerHTML = `
+        <li>Electronics /</li>
+        <li>furniture /</li>
+        <li>sports /</li>
+        <li>home & kitchen /</li>
+        <li style="font-weight: bold;">${product.category}</li>
+        <li style="font-weight: bold;">${product.subcategory}</li>
     `;
 
-    const productDetailsTable = document.querySelector('.product-details table');
-    productDetailsTable.innerHTML = `
-        <tr><th>Specifications</th></tr>
-        ${Object.entries(product.specifications).map(([key, value]) => 
-            `<tr><td>${key}</td><td>${value}</td></tr>`
-        ).join('')}
+    const productPurchaseDetails = document.querySelector('.product-purchase-details');
+    productPurchaseDetails.innerHTML = ''; 
+    const productImg =  document.createElement('div');
+    productImg.classList.add('product-img');
+    productImg.innerHTML = `
+        <div class="product-original-img">
+            ${product.images.map((img, index) => 
+                `<img class="${index === 0 ? 'pink-airpod' : ''}" src="${img}" alt="" style="${index === 0 ? 'height: 350px; width: 300px;' : 'display: none; height: 250px; width: 300px;'}">`
+            ).join('')}
+        </div>
+        <div class="product-variety-img">
+            ${product.images.slice(0, 4).map((img, index) => 
+                `<img class="${['blue', 'grey', 'black', 'white'][index]}" src="${img}" alt="">`
+            ).join('')}
+        </div>
     `;
+    productPurchaseDetails.appendChild(productImg);
+    
+
+    const productPurchaseInfo =  document.createElement('div');
+    productPurchaseInfo.classList.add('product-purchase-info');    
+    productPurchaseInfo.innerHTML = `
+        <div class="product-details">
+            <h1 class="product-name">${product.name}</h1>
+            <p class="product-description">${product.description}</p>
+            <div class="product-rating">
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <sup>(${product.reviews})</sup>
+            </div>
+        </div>
+        <hr style="width: 80%;">
+        <div class="product-pricing">
+            <h3>$${product.price.toFixed(2)} or $${(product.price / 6).toFixed(2)}/month</h3>
+            <p>suggested payment with 6 months special financing</p>
+        </div>
+        <hr style="width: 80%;">
+        <div class="product-color">
+            <p>choose a color</p>
+            <div class="colors">
+                <div class="pink-color-airpod" style="background-color: rgb(237, 156, 169);"></div>
+                <div class="blue-color-airpod" style="background-color:rgb(86, 86, 151);"></div>
+                <div class="grey-color-airpod" style="background-color: grey;"></div>
+                <div class="black-color-airpod" style="background-color: black;"></div>
+                <div class="white-color-airpod" style="background-color: white; border: 1px solid grey;"></div>
+            </div>
+        </div>
+        <hr style="width: 80%;">
+        <div class="product-order-amount">
+            <div class="item-amount">
+                <span class="minus-order">-</span>
+                <span class="order-num">01</span>
+                <span class="plus-order">+</span>
+            </div>
+            <div class="item-text">
+                <p>only <span>12 items</span> left</p>
+                <p>don't miss it</p>
+            </div>
+        </div>
+        <div class="product-btn">
+            <button><a href="buyNow.html" style="color: white; text-decoration: none;">buy now</a></button>
+            <button>add to cart</button>
+        </div>
+        <div class="delivery-details">
+            <div class="delivery">
+                <i class="fa-solid fa-truck"></i>
+                <div>
+                    <p>free delivery</p>
+                    <p><a href="">enter your postal code for delivery availability</a></p>
+                </div>
+            </div>
+            <div class="delivery">
+                <i class="fa-regular fa-calendar"></i>
+                <div>
+                    <p>return delivery</p>
+                    <p>free 30 days delivery returns. <a href="">Details</a></p>
+                </div>
+            </div>
+        </div>
+
+
+    `;
+    productPurchaseDetails.appendChild(productPurchaseInfo);
+
+
+
+    // const productDetailsTable = document.createElement('div');
+    // productDetailsTable.classList.add('product-details');
+    // productDetailsTable.innerHTML = `
+    //         <tr><th>Specifications</th></tr>
+    //     ${Object.entries(product.specifications).map(([key, value]) => 
+    //         `<tr><td>${key}</td><td>${value}</td></tr>`
+    //     ).join('')}
+    // `
+
+    // specifications.appendChild(productDetailsTable);
+
+
+    // const generalTable = document.querySelector('.general table');
+    // generalTable.innerHTML = `
+        // <tr><th>General</th></tr>
+        // <tr><td>brand</td><td>${product.brand}</td></tr>
+        // <tr><td>model</td><td>${product.name}</td></tr>
+        // <tr><td>price</td><td>$${product.price.toFixed(2)}</td></tr>
+        // <tr><td>in stock</td><td>${product.inStock ? 'Yes' : 'No'}</td></tr>
+        // <tr><td>subcategory</td><td>${product.subcategory}</td></tr>
+    // `;
+
+    // const productDetailsTable = document.querySelector('.product-details table');
+    // productDetailsTable.innerHTML = `
+        // <tr><th>Specifications</th></tr>
+        // ${Object.entries(product.specifications).map(([key, value]) => 
+        //     `<tr><td>${key}</td><td>${value}</td></tr>`
+        // ).join('')}
+    // `;
 }
