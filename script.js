@@ -180,7 +180,7 @@ function createProducts(productItems) {
                     <i class="fa-solid fa-heart mark" style="display: none"></i>
                 </div>
                 <div class="ItemImg">
-                    <img src="${productItem.images[0]}" alt="${productItem.name}">
+                    <img src="${productItem.images[0]}" alt="${productItem.name}" onclick="fetchProductNotFound(${productItem.id})">
                 </div>
             </div>
             <div class="dealItemDispalyInfo">
@@ -234,9 +234,9 @@ function createProducts(productItems) {
 }
 
 
-async function fetchProductNotFound() {
+async function fetchProductNotFound(id) {
     try {
-        const response = await fetch("https://shopcart-0q3t.onrender.com/api/products/:id");
+        const response = await fetch(`https://shopcart-0q3t.onrender.com/api/products/${id}`);
         const data = await response.json();
         console.log(data);
         AOS.init();
