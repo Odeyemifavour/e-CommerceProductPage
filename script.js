@@ -233,14 +233,18 @@ function createProducts(productItems) {
 }
 
 
+// async function purchaseDetails(id) {
+//     window.location.href = `purchaseDetails.html?id=${id}`;
+//     try {
+//         const response = await fetch(`https://shopcart-0q3t.onrender.com/api/products/${id}`);
+//         const data = await response.json();
+//         console.log(data);
+//         AOS.init();
+//     } catch (error) {
+//         console.error(error);
+//     }
+// }
+
 async function purchaseDetails(id) {
-    window.location.href = "purchaseDetails.html";
-    try {
-        const response = await fetch(`https://shopcart-0q3t.onrender.com/api/products/${id}`);
-        const data = await response.json();
-        console.log(data);
-        AOS.init();
-    } catch (error) {
-        console.error(error);
-    }
+    window.location.href = `purchaseDetails.html?id=${id}`;
 }

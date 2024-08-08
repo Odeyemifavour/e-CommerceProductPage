@@ -183,22 +183,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// async function fetchProducts() {
-//     try {
-//         const response = await fetch("https://shopcart-0q3t.onrender.com/api/products");
-//         const products = await response.json();
-//         console.log(products);
 
-//         allProducts = products; 
-//         createProducts(products);
-//         filterProductsByCategories();
-//         AOS.init();
-//     } catch (error) {
-//         console.error(error);
-//     }
-// }
+document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+    if (productId) {
+        fetchAndDisplayProductDetails(productId);
+    } else {
+        console.error('No product ID provided');
+    }
+});
 
-async function fetchProductDetails(id) {
+async function fetchAndDisplayProductDetails(id) {
     try {
         const response = await fetch(`https://shopcart-0q3t.onrender.com/api/products/${id}`);
         const product = await response.json();
@@ -209,13 +205,18 @@ async function fetchProductDetails(id) {
 }
 
 
+
+
 function displayProductDetails(product) {
+    const productPurchaseDetails = document.querySelector('.product-purchase-details');
+    
     const productListType = document.querySelector('.product-list-type');
     productListType.innerHTML = `
         <li>Electronics /</li>
         <li>furniture /</li>
         <li>sports /</li>
         <li>home & kitchen /</li>
+         <li style="font-weight: bold;">${product.category} /</li>
         <li style="font-weight: bold;">${product.subcategory}</li>
     `;
 
