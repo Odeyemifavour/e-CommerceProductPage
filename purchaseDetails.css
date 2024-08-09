@@ -220,6 +220,8 @@ body
 {
     width: 80%;
     margin: auto;
+    height: 300px;
+    width: 300px;
 }
 .product-img .product-variety-img
 {

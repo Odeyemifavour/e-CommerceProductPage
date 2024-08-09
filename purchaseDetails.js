@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 async function fetchAndDisplayProductDetails(id) {
-    console.log("hello")
     try {
         const response = await fetch(`https://shopcart-0q3t.onrender.com/api/products/${id}`);
         const product = await response.json();
@@ -21,34 +20,13 @@ async function fetchAndDisplayProductDetails(id) {
 }
 
 function displayProductDetails(product) {
-    
     const productListType = document.querySelector('.product-list-type');
-
-    const specifications = document.querySelector('.specifications');
-    console.log({specifications})
-    const productListType2 = document.querySelector('.specifications');
-    console.log({productListType2})
-
-    const generalTable = document.createElement('div');
-    generalTable.classList.add('general');
-    productListType2.innerHTML = `
-        <table>   
-        <tr><th>General</th></tr>
-        <tr><td>brand</td><td>${product.brand}</td></tr>
-        <tr><td>model</td><td>${product.name}</td></tr>
-        <tr><td>price</td><td>$${product.price.toFixed(2)}</td></tr>
-        <tr><td>in stock</td><td>${product.inStock ? 'Yes' : 'No'}</td></tr>
-        <tr><td>subcategory</td><td>${product.subcategory}</td></tr>
-        </table>
-    `
-    specifications.appendChild(generalTable);
-   
     productListType.innerHTML = `
         <li>Electronics /</li>
         <li>furniture /</li>
         <li>sports /</li>
         <li>home & kitchen /</li>
-        <li style="font-weight: bold;">${product.category}</li>
+        <li style="font-weight: bold;">${product.category} /</li>
         <li style="font-weight: bold;">${product.subcategory}</li>
     `;
 
@@ -58,14 +36,13 @@ function displayProductDetails(product) {
     productImg.classList.add('product-img');
     productImg.innerHTML = `
         <div class="product-original-img">
-            ${product.images.map((img, index) => 
-                `<img class="${index === 0 ? 'pink-airpod' : ''}" src="${img}" alt="" style="${index === 0 ? 'height: 350px; width: 300px;' : 'display: none; height: 250px; width: 300px;'}">`
-            ).join('')}
+          <img src=" ${product.images[0]}"  >
         </div>
         <div class="product-variety-img">
-            ${product.images.slice(0, 4).map((img, index) => 
-                `<img class="${['blue', 'grey', 'black', 'white'][index]}" src="${img}" alt="">`
-            ).join('')}
+            <img src="${product.images[1]}">
+            <img src="${product.images[2]}">
+            <img src="${product.images[3]}">
+            <img src="${product.images[4]}">
         </div>
     `;
     productPurchaseDetails.appendChild(productImg);
@@ -139,35 +116,33 @@ function displayProductDetails(product) {
     `;
     productPurchaseDetails.appendChild(productPurchaseInfo);
 
+             const specifications = document.querySelector('.specifications');
+    const productListType2 = document.querySelector('.specifications');
 
+    const generalTable = document.createElement('div');
+    generalTable.classList.add('general');
+    generalTable.innerHTML = `
+        <table>   
+            <tr><th>General</th></tr>
+            <tr><td>brand</td><td>${product.brand}</td></tr>
+            <tr><td>model</td><td>${product.name}</td></tr>
+            <tr><td>price</td><td>$${product.price.toFixed(2)}</td></tr>
+            <tr><td>in stock</td><td>${product.inStock ? 'Yes' : 'No'}</td></tr>
+            <tr><td>subcategory</td><td>${product.subcategory}</td></tr>
+        </table>
+    `
+    specifications.appendChild(generalTable);
+   
+    const productDetailsTable = document.createElement('div');
+    productDetailsTable.classList.add('product-details');
+    productDetailsTable.innerHTML = `
+            <table>
+            <tr><th>Specifications</th></tr>
+        ${Object.entries(product.specifications).map(([key, value]) => 
+            `<tr><td>${key}</td><td>${value}</td></tr>`
+        ).join('')}
+        </table>
+    `
+    specifications.appendChild(productDetailsTable);
 
-    // const productDetailsTable = document.createElement('div');
-    // productDetailsTable.classList.add('product-details');
-    // productDetailsTable.innerHTML = `
-    //         <tr><th>Specifications</th></tr>
-    //     ${Object.entries(product.specifications).map(([key, value]) => 
-    //         `<tr><td>${key}</td><td>${value}</td></tr>`
-    //     ).join('')}
-    // `
-
-    // specifications.appendChild(productDetailsTable);
-
-
-    // const generalTable = document.querySelector('.general table');
-    // generalTable.innerHTML = `
-        // <tr><th>General</th></tr>
-        // <tr><td>brand</td><td>${product.brand}</td></tr>
-        // <tr><td>model</td><td>${product.name}</td></tr>
-        // <tr><td>price</td><td>$${product.price.toFixed(2)}</td></tr>
-        // <tr><td>in stock</td><td>${product.inStock ? 'Yes' : 'No'}</td></tr>
-        // <tr><td>subcategory</td><td>${product.subcategory}</td></tr>
-    // `;
-
-    // const productDetailsTable = document.querySelector('.product-details table');
-    // productDetailsTable.innerHTML = `
-        // <tr><th>Specifications</th></tr>
-        // ${Object.entries(product.specifications).map(([key, value]) => 
-        //     `<tr><td>${key}</td><td>${value}</td></tr>`
-        // ).join('')}
-    // `;
 }
