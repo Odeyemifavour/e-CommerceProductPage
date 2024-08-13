@@ -1273,6 +1273,37 @@ header  .hamburger:hover
     transition: background 0.5s ease-in;
 }
 
+.star-outer
+{
+    position:relative;
+    display: inline-block;
+   
+}
+.star-inner
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+.star-outer::before
+{
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: 'font Awesome 5 free';
+    font-weight: 900;
+    color: #ccc;
+}
+.star-inner::before
+{
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: 'font Awesome 5 free';
+    font-weight: 900;
+    color: green;
+}
+
+
 #cashBackOffer
 {
     width: 100%;

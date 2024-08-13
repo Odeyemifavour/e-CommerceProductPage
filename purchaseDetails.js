@@ -36,13 +36,13 @@ function displayProductDetails(product) {
     productImg.classList.add('product-img');
     productImg.innerHTML = `
         <div class="product-original-img">
-          <img src=" ${product.images[0]}"  >
+          <img class="original-img" src=" ${product.images[0]}"  >
         </div>
         <div class="product-variety-img">
-            <img src="${product.images[1]}">
-            <img src="${product.images[2]}">
-            <img src="${product.images[3]}">
-            <img src="${product.images[4]}">
+            <img class="variety-img1"  src="${product.images[1]}">
+            <img class="variety-img2"  src="${product.images[2]}">
+            <img class="variety-img3"  src="${product.images[3]}">
+            <img class="variety-img4"  src="${product.images[4]}">
         </div>
     `;
     productPurchaseDetails.appendChild(productImg);
@@ -72,11 +72,11 @@ function displayProductDetails(product) {
         <div class="product-color">
             <p>choose a color</p>
             <div class="colors">
-                <div class="pink-color-airpod" style="background-color: rgb(237, 156, 169);"></div>
-                <div class="blue-color-airpod" style="background-color:rgb(86, 86, 151);"></div>
-                <div class="grey-color-airpod" style="background-color: grey;"></div>
-                <div class="black-color-airpod" style="background-color: black;"></div>
-                <div class="white-color-airpod" style="background-color: white; border: 1px solid grey;"></div>
+                <div  style="background-color: rgb(237, 156, 169);"></div>
+                <div  style="background-color:rgb(86, 86, 151);"></div>
+                <div  style="background-color: grey;"></div>
+                <div  style="background-color: black;"></div>
+                <div  style="background-color: white; border: 1px solid grey;"></div>
             </div>
         </div>
         <hr style="width: 80%;">
@@ -116,7 +116,7 @@ function displayProductDetails(product) {
     `;
     productPurchaseDetails.appendChild(productPurchaseInfo);
 
-             const specifications = document.querySelector('.specifications');
+    const specifications = document.querySelector('.specifications');
     const productListType2 = document.querySelector('.specifications');
 
     const generalTable = document.createElement('div');
@@ -146,3 +146,14 @@ function displayProductDetails(product) {
     specifications.appendChild(productDetailsTable);
 
 }
+const originalImg = document.querySelector('.original-img');
+const varietyImg1 = document.querySelector('.variety-img1');
+const varietyImg2 = document.querySelector('.variety-img2');
+const varietyImg3 = document.querySelector('.variety-img3');
+const varietyImg4 = document.querySelector('.variety-img4');
+console.log(varietyImg1);
+
+varietyImg1.addEventListener('click',() => {
+    varietyImg1.style.display = "none"
+})
+

@@ -143,13 +143,6 @@ function filterProductsByCategories() {
     }
 }
 
-// function filterProductsByCategory(category) {
-//     const filteredProducts = allProducts.filter(product =>
-//         product.category === category
-//     );
-//     createProducts(filteredProducts);
-// }
-
 async function fetchProducts() {
     try {
         const response = await fetch("https://shopcart-0q3t.onrender.com/api/products");
@@ -159,6 +152,7 @@ async function fetchProducts() {
         allProducts = products; 
         createProducts(products);
         filterProductsByCategories();
+        rateProduct(products)
         AOS.init();
     } catch (error) {
         console.error(error);
@@ -188,14 +182,12 @@ function createProducts(productItems) {
                     <p class="dealItemDisplayPrice"><sup>$</sup><span class="dealItemDisplayPriceAmnt">${productItem.price}</span><sup>.00</sup></p>
                 </span>
                 <p class="dealItemDispalyDescription">${productItem.description}</p>
-                <span class="rating">
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
+                <div class="rating">
+                    <div class="star-outer" >
+                         <div class="star-inner" > </div>
+                    </div>
                     <sup>(${productItem.reviews})</sup>
-                </span>
+                </div>
             </div>
             <div class="dealItemAddToCart">
                 <button>add to cart</button>
@@ -219,32 +211,28 @@ function createProducts(productItems) {
             markAsFavourite.classList.remove('markfavourite');
             unMarkAsFavourite.classList.remove('unMarkFavourite');
         });
-
-        const stars = dealItem.querySelectorAll('.rating i');
-
-        stars.forEach(star => {
-            star.addEventListener('click', () => {
-                star.classList.toggle('fa-regular');
-                star.classList.toggle('fa-solid');
-                star.classList.toggle('markImportant');
-            });
-        });
     });
 }
+    const totalRating = 5;
+    function rateProduct( products){
+        products.forEach(product => {
+            console.log(`${product.rating}`);
+            const starPercentage = (`${product.rating}`/totalRating)*100;
+            console.log(starPercentage);
+            const starPercentageRounded = `${Math.round(starPercentage / 10)* 10}%`
+            console.log(starPercentageRounded);
 
+            const starInner = document.querySelector('.rating .star-inner');
+            console.log(starInner);
 
-// async function purchaseDetails(id) {
-//     window.location.href = `purchaseDetails.html?id=${id}`;
-//     try {
-//         const response = await fetch(`https://shopcart-0q3t.onrender.com/api/products/${id}`);
-//         const data = await response.json();
-//         console.log(data);
-//         AOS.init();
-//     } catch (error) {
-//         console.error(error);
-//     }
-// }
+            starInner.style.width = starPercentageRounded;
+            
+        
+        })
+
+    }
 
 async function purchaseDetails(id) {
     window.location.href = `purchaseDetails.html?id=${id}`;
-}
+}  ;
+
