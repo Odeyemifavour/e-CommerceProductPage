@@ -39,27 +39,48 @@ function displayProductDetails(product) {
           <img class="original-img" src=" ${product.images[0]}"  >
         </div>
         <div class="product-variety-img">
-            <img class="variety-img1"  src="${product.images[1]}">
-            <img class="variety-img2"  src="${product.images[2]}">
-            <img class="variety-img3"  src="${product.images[3]}">
-            <img class="variety-img4"  src="${product.images[4]}">
+            <img class="v-img1"  src="${product.images[1]}">
+            <img class="v-img2"  src="${product.images[2]}">
+            <img class="v-img3"  src="${product.images[3]}">
+            <img class="v-img4"  src="${product.images[4]}">
         </div>
     `;
     productPurchaseDetails.appendChild(productImg);
     
+    const varietyImg1 = document.querySelector('.v-img1');
+    const varietyImg2 = document.querySelector('.v-img2');
+    const varietyImg3 = document.querySelector('.v-img3');
+    const varietyImg4 = document.querySelector('.v-img4');
+    const originalImg = document.querySelector('.original-img');
+    varietyImg1.addEventListener('click', ()=>{
+        originalImg.src = varietyImg1.src;
+    });
+    varietyImg2.addEventListener('click', ()=>{
+        originalImg.src = varietyImg2.src;
+    });
+    varietyImg3.addEventListener('click', ()=>{
+        originalImg.src = varietyImg3.src;
+    });
+    varietyImg4.addEventListener('click', ()=>{
+        originalImg.src = varietyImg4.src;
+    });
+
+
+
+    productPurchaseDetails.appendChild(productImg);
+    
 
     const productPurchaseInfo =  document.createElement('div');
-    productPurchaseInfo.classList.add('product-purchase-info');    
+    productPurchaseInfo.classList.add('product-purchase-info');   
+    
+    const filledStar = ' <span style="color:yellow; font-size:25px"> &#9733;</span>'.repeat(`${product.rating}`)
+    const emptyStar = ' <span style="font-size:25px">&#9734;</span>'.repeat(5 - `${product.rating}` );
     productPurchaseInfo.innerHTML = `
         <div class="product-details">
             <h1 class="product-name">${product.name}</h1>
             <p class="product-description">${product.description}</p>
             <div class="product-rating">
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
+                ${filledStar}${emptyStar}
                 <sup>(${product.reviews})</sup>
             </div>
         </div>
@@ -116,6 +137,23 @@ function displayProductDetails(product) {
     `;
     productPurchaseDetails.appendChild(productPurchaseInfo);
 
+
+    const minusOrder = document.querySelector('.minus-order');
+    const plusOrder = document.querySelector('.plus-order');
+    const orderNumber = document.querySelector('.order-num');
+
+    let num = 1;
+    plusOrder.addEventListener('click', ()=>{
+        num++
+        if((num<10)){
+            orderNumber.innerText = "0" + num;
+        }
+        else{
+            orderNumber.innerText = num;
+        }
+    })
+
+
     const specifications = document.querySelector('.specifications');
     const productListType2 = document.querySelector('.specifications');
 
@@ -146,14 +184,3 @@ function displayProductDetails(product) {
     specifications.appendChild(productDetailsTable);
 
 }
-const originalImg = document.querySelector('.original-img');
-const varietyImg1 = document.querySelector('.variety-img1');
-const varietyImg2 = document.querySelector('.variety-img2');
-const varietyImg3 = document.querySelector('.variety-img3');
-const varietyImg4 = document.querySelector('.variety-img4');
-console.log(varietyImg1);
-
-varietyImg1.addEventListener('click',() => {
-    varietyImg1.style.display = "none"
-})
-

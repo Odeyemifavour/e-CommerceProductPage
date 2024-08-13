@@ -152,7 +152,6 @@ async function fetchProducts() {
         allProducts = products; 
         createProducts(products);
         filterProductsByCategories();
-        rateProduct(products)
         AOS.init();
     } catch (error) {
         console.error(error);
@@ -165,7 +164,8 @@ function createProducts(productItems) {
     productItems.forEach(productItem => {
         const dealItem = document.createElement('div');
         dealItem.classList.add('dealItem');
-
+        const filledStar = ' <span style="color:yellow; font-size:25px"> &#9733;</span>'.repeat(`${productItem.rating}`)
+        const emptyStar = ' <span style="font-size:25px">&#9734;</span>'.repeat(5 - `${productItem.rating}` );
         dealItem.innerHTML = `
                <div class="dealItemDisplay">
                 <div class="markDealItemAsFavorite">
@@ -183,9 +183,7 @@ function createProducts(productItems) {
                 </span>
                 <p class="dealItemDispalyDescription">${productItem.description}</p>
                 <div class="rating">
-                    <div class="star-outer" >
-                         <div class="star-inner" > </div>
-                    </div>
+                    ${filledStar}${emptyStar}
                     <sup>(${productItem.reviews})</sup>
                 </div>
             </div>
@@ -211,27 +209,11 @@ function createProducts(productItems) {
             markAsFavourite.classList.remove('markfavourite');
             unMarkAsFavourite.classList.remove('unMarkFavourite');
         });
+        
+    
     });
 }
-    const totalRating = 5;
-    function rateProduct( products){
-        products.forEach(product => {
-            console.log(`${product.rating}`);
-            const starPercentage = (`${product.rating}`/totalRating)*100;
-            console.log(starPercentage);
-            const starPercentageRounded = `${Math.round(starPercentage / 10)* 10}%`
-            console.log(starPercentageRounded);
-
-            const starInner = document.querySelector('.rating .star-inner');
-            console.log(starInner);
-
-            starInner.style.width = starPercentageRounded;
-            
-        
-        })
-
-    }
-
+    
 async function purchaseDetails(id) {
     window.location.href = `purchaseDetails.html?id=${id}`;
 }  ;
