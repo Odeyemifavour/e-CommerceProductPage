@@ -293,15 +293,28 @@ body
 {
     display: flex;
     flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    
 }
 .product-purchase-info .product-color .colors div
 {
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
     margin-right: 0.5em;
     cursor: pointer;
     display: flex;
+    align-items: center;
     flex-direction: column;
+   border-radius: 50%;
+   border: 2px solid white;
+}
+.product-purchase-info .product-color .colors div img
+{
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
     border-radius: 50%;
 }
 .product-purchase-info .product-color .colors div:hover

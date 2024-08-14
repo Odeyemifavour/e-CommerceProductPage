@@ -47,11 +47,16 @@ function displayProductDetails(product) {
     `;
     productPurchaseDetails.appendChild(productImg);
     
+    ////variety design toggle to display as original image
     const varietyImg1 = document.querySelector('.v-img1');
     const varietyImg2 = document.querySelector('.v-img2');
     const varietyImg3 = document.querySelector('.v-img3');
     const varietyImg4 = document.querySelector('.v-img4');
     const originalImg = document.querySelector('.original-img');
+    varietyImg1.addEventListener('click', ()=>{
+       
+    });
+    
     varietyImg1.addEventListener('click', ()=>{
         originalImg.src = varietyImg1.src;
     });
@@ -65,16 +70,14 @@ function displayProductDetails(product) {
         originalImg.src = varietyImg4.src;
     });
 
-
-
     productPurchaseDetails.appendChild(productImg);
     
 
     const productPurchaseInfo =  document.createElement('div');
     productPurchaseInfo.classList.add('product-purchase-info');   
     
-    const filledStar = ' <span style="color:yellow; font-size:25px"> &#9733;</span>'.repeat(`${product.rating}`)
-    const emptyStar = ' <span style="font-size:25px">&#9734;</span>'.repeat(5 - `${product.rating}` );
+    const filledStar = ' <span style="color:yellow; font-size:25px"> &#9733;</span>'.repeat(Math.round(`${product.rating}`))
+    const emptyStar = ' <span style="font-size:25px">&#9734;</span>'.repeat(5 - Math.round(`${product.rating}`) );
     productPurchaseInfo.innerHTML = `
         <div class="product-details">
             <h1 class="product-name">${product.name}</h1>
@@ -91,13 +94,13 @@ function displayProductDetails(product) {
         </div>
         <hr style="width: 80%;">
         <div class="product-color">
-            <p>choose a color</p>
+            <p>choose a design</p>
             <div class="colors">
-                <div  style="background-color: rgb(237, 156, 169);"></div>
-                <div  style="background-color:rgb(86, 86, 151);"></div>
-                <div  style="background-color: grey;"></div>
-                <div  style="background-color: black;"></div>
-                <div  style="background-color: white; border: 1px solid grey;"></div>
+                <div> <img class="design1"  src="${product.images[0]}"></div>
+                <div> <img class="design2"  src="${product.images[1]}"></div>
+                <div> <img class="design3"  src="${product.images[2]}"></div>
+                <div> <img class="design4"  src="${product.images[3]}"></div>
+                <div> <img class="design5"  src="${product.images[4]}"></div>
             </div>
         </div>
         <hr style="width: 80%;">
@@ -137,11 +140,35 @@ function displayProductDetails(product) {
     `;
     productPurchaseDetails.appendChild(productPurchaseInfo);
 
+    //functionality for product selection
+    const design1 = document.querySelector('.design1');
+    const design2 = document.querySelector('.design2');
+    const design3 = document.querySelector('.design3');
+    const design4 = document.querySelector('.design4');
+    const design5 = document.querySelector('.design5');
 
+    console.log(design2)
+    design1.addEventListener('click', ()=>{
+        originalImg.src = design1.src;
+    });
+    design2.addEventListener('click', ()=>{
+        originalImg.src = design2.src;
+    });
+    design3.addEventListener('click', ()=>{
+        originalImg.src = design3.src;
+    });
+    design4.addEventListener('click', ()=>{
+        originalImg.src = design4.src;
+    });
+    design5.addEventListener('click', ()=>{
+        originalImg.src = design5.src;
+    })
+
+
+// functionality to add or minus order
     const minusOrder = document.querySelector('.minus-order');
     const plusOrder = document.querySelector('.plus-order');
     const orderNumber = document.querySelector('.order-num');
-
     let num = 1;
     plusOrder.addEventListener('click', ()=>{
         num++
@@ -152,8 +179,14 @@ function displayProductDetails(product) {
             orderNumber.innerText = num;
         }
     })
+    minusOrder.addEventListener('click', ()=>{
+        if((num>1)){
+            num--
+            orderNumber.innerText = "0" + num;
+        }
+    })
 
-
+//product specifications here
     const specifications = document.querySelector('.specifications');
     const productListType2 = document.querySelector('.specifications');
 

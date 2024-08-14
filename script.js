@@ -164,8 +164,8 @@ function createProducts(productItems) {
     productItems.forEach(productItem => {
         const dealItem = document.createElement('div');
         dealItem.classList.add('dealItem');
-        const filledStar = ' <span style="color:yellow; font-size:25px"> &#9733;</span>'.repeat(`${productItem.rating}`)
-        const emptyStar = ' <span style="font-size:25px">&#9734;</span>'.repeat(5 - `${productItem.rating}` );
+        const filledStar = ' <span style="color:yellow; font-size:25px"> &#9733;</span>'.repeat(Math.round(`${productItem.rating}`));
+        const emptyStar = ' <span style="font-size:25px">&#9734;</span>'.repeat(5 - Math.round(`${productItem.rating}`));
         dealItem.innerHTML = `
                <div class="dealItemDisplay">
                 <div class="markDealItemAsFavorite">
