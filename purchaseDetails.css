@@ -101,7 +101,6 @@ body
 .languageList ul
 {
     list-style-type: none;
-    
 }
 .languageList ul li
 {
@@ -240,6 +239,11 @@ body
     background-color: whitesmoke;
     border-radius: 10px;
     cursor: pointer;
+    border: 2px solid white;
+}
+.product-img .product-variety-img img:hover
+{
+    border: 2px solid rgb(4, 42, 42);
 }
 .product-purchase-info
 {
@@ -492,4 +496,105 @@ body
 .unMarkImportant
 {
     display: none;
+}
+@media (min-width: 320px) and (max-width: 480px){
+    .pageTop .pageTopContent
+{
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+    .pageTop .pageTopContent .shop
+{
+   display: none;
+}
+    .product-type
+{
+    width: 90%;
+    margin: auto;
+    padding: 1em 0;
+    font-size: 15px;
+}
+.product-type ul li
+{
+    font-size: 8px;
+}
+.product-purchase-details
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-img
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    padding: 2em 0;
+}
+.product-img .product-original-img
+{
+    width: 100%;
+    height: 300px;
+}
+.product-img .product-original-img img 
+{
+    width: 100%;
+    margin: auto;
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+}
+.product-img .product-variety-img
+{
+    gap: 5px;
+}
+.product-img .product-variety-img img
+{
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid white;
+    margin-right: 0;
+}
+.product-purchase-info
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+   justify-content: center;
+}
+.product-purchase-info .product-details h1
+{
+    font-size: 25px;
+}
+.product-purchase-info .product-color  .colors
+{
+    gap: 5px;
+}
+.product-purchase-info .product-color .colors div
+{
+
+    margin-right: 0;
+}
+.specifications
+{
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    padding: 1em 0;
+    justify-content: center;
+    gap: 20px;
+}
+.specifications div
+{
+    width: 90%;
+    margin: auto;
+}
+
 }
