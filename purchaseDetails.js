@@ -87,12 +87,12 @@ function displayProductDetails(product) {
                 <sup>(${product.reviews})</sup>
             </div>
         </div>
-        <hr style="width: 80%;">
+        <hr>
         <div class="product-pricing">
             <h3>$${product.price.toFixed(2)} or $${(product.price / 6).toFixed(2)}/month</h3>
             <p>suggested payment with 6 months special financing</p>
         </div>
-        <hr style="width: 80%;">
+        <hr>
         <div class="product-color">
             <p>choose a design</p>
             <div class="colors">
@@ -103,7 +103,7 @@ function displayProductDetails(product) {
                 <div> <img class="design5"  src="${product.images[4]}"></div>
             </div>
         </div>
-        <hr style="width: 80%;">
+        <hr>
         <div class="product-order-amount">
             <div class="item-amount">
                 <span class="minus-order">-</span>

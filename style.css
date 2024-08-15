@@ -12,6 +12,10 @@ body
     width: 100vw;
     overflow-x: hidden;
 }
+hr
+{
+    width: 80%;
+}
 .container
 {
     width: 100%;
@@ -1911,6 +1915,10 @@ footer .footerBottom  section p:hover
 
 
 @media (min-width: 320px) and (max-width: 480px){
+    hr 
+    {
+        width: 80%;
+    }
     .container #pageTop
     {
         padding: 2px;
