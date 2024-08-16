@@ -363,11 +363,15 @@ header{
 header  .hamburger{
     display: none;
 }
+
 header  .hamburger:hover
 {
     color: #605d5d;
 }
-
+header .burger
+{
+    display: none;
+}
 #intro
 {
     width: 100%;
@@ -2495,6 +2499,133 @@ footer .footerBottom
 footer .footerBottom section 
 {
     margin: 0.8em 0;
+}
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    header
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 80px;
+    }
+    header  .hamburger{
+        display: none;
+    }
+    .headerLogo
+    {
+        width: 10%;
+    }
+    .headerLogo a img 
+    {
+        width: 150px;
+    }
+    header .burger
+    {
+        display: block;
+        font-size: 20px;
+        width: 10%;
+        cursor: pointer;
+    }
+    .headerMenu .headerMenuList ul
+    {
+        display: none;
+    }
+    .headerAccountAndCart 
+    {
+        width: 70%;
+    }
+    .headerAccountAndCart   #cart,.headerAccountAndCart  #account
+    {
+        display: flex;
+        align-items: center;
+    }
+    .headerAccountAndCart  #account span i, .headerAccountAndCart   #cart span i
+    {
+        font-size: 20px;
+    }
+    #intro .introInfo
+    {
+        width: 90%;
+    }
+    #intro .introText
+    {
+        width: 100%;
+    }
+    #intro .introImg
+    {
+        display: none;
+    }
+    #categories
+    {
+        width: 100%;
+    }
+    #categories .categoryItem  h2
+    {
+        font-size: 30px;
+    }
+    #categories .categoryItem  .categoryList
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        row-gap: 10px;
+    }
+    #categories .categoryList a .category 
+    {
+        width: 220px;
+        height: 250px;
+
+    }
+    #bestDeals .deals .deal  .dealItemDisplay .dealItemImg img
+{
+   width: 250px;
+}
+#bestDeals .deals
+{
+    grid-auto-columns: 50%;
+}
+#brandDisplay
+{
+    width: 94%;
+}
+#brandDisplay .brands
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#brandDisplay .brands .brand 
+{
+    height: 120px;
+   
+}
+#discountArea
+{
+    width: 94%;
+}
+#discountArea .discountProducts
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    row-gap: 5px;
+}
+#discountArea .discountProducts .discountProduct
+{
+    width: 100%;
+}
+#discountArea .discountProducts .discountProduct .discountProductImg
+{
+    width: 100%;
+}
+#discountArea .discountProducts .discountProduct .discountProductImg img
+{
+    width: 100%;
+}
+#popularProducts .products
+{
+    grid-auto-columns: 50%;
 }
 }
 
