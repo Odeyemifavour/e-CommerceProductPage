@@ -1079,8 +1079,6 @@ header .burger
 #cashBackDiscount:hover
 {
     transform: scale(1.07);
-    
-
 }
 
 #cashBackDiscount .cashBackInfo
@@ -1091,7 +1089,6 @@ header .burger
     padding: 40px;
     display: flex;
     flex-direction: column;
-    
     justify-content: center;
     float: right;
     text-align: left;
@@ -1296,22 +1293,6 @@ header .burger
     overflow: hidden;
 
 }
-.star-outer::before
-{
-    content: "\f005 \f005 \f005 \f005 \f005";
-    font-family: 'font Awesome 5 free';
-    font-weight: 900;
-    color: #ccc;
-}
-.star-inner::before
-{
-    content: "\f005 \f005 \f005 \f005 \f005";
-    font-family: 'font Awesome 5 free';
-    font-weight: 900;
-    color: green;
-}
-
-
 #cashBackOffer
 {
     width: 100%;
@@ -1443,6 +1424,9 @@ header .burger
 {
     transition: 2s;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #sellingProducts .sellingProductItems .sellingProduct .sellingProductItemDisplay .sellingproductItemImg img:hover
 {
@@ -2278,7 +2262,6 @@ footer .footerBottom  section p:hover
     display: grid;
     grid-template-columns: auto auto;
     justify-content: center;
-   
 }
 #bestDeal .bestDealItems .dealItem
 {
@@ -2559,6 +2542,10 @@ footer .footerBottom section
     }
     #categories
     {
+        width: 98%;
+    }
+    #categories .categoryItem 
+    {
         width: 100%;
     }
     #categories .categoryItem  h2
@@ -2570,21 +2557,37 @@ footer .footerBottom section
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         width: 100%;
-        row-gap: 10px;
+        row-gap: 20px;
     }
     #categories .categoryList a .category 
     {
-        width: 220px;
+        width: 230px;
         height: 250px;
-
+        margin: 0 0.5em;
     }
     #bestDeals .deals .deal  .dealItemDisplay .dealItemImg img
 {
    width: 250px;
 }
+#bestDeals
+{
+    width: 98%;
+}
 #bestDeals .deals
 {
     grid-auto-columns: 50%;
+}
+#bestDeals .deals .deal  .dealItemDispalyInfo .displayInfoNameAndPrice .dealItemDisplayName
+{
+    font-size: 22px;
+}
+#bestDeals .deals .deal  .dealItemDispalyInfo .displayInfoNameAndPrice p .dealItemDisplayPriceAmnt
+{
+    font-size: 22px;
+}
+#bestDeals .deals .deal  .dealItemDispalyInfo .dealItemDispalyDescription
+{
+    font-size: 15px;
 }
 #brandDisplay
 {
@@ -2608,7 +2611,6 @@ footer .footerBottom section
 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
     row-gap: 5px;
 }
 #discountArea .discountProducts .discountProduct
@@ -2623,10 +2625,210 @@ footer .footerBottom section
 {
     width: 100%;
 }
+#popularProducts 
+{
+    width: 98%;
+}
 #popularProducts .products
 {
     grid-auto-columns: 50%;
 }
+#cashBackDiscount
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 600px;  
+}
+#cashBackDiscount .cashBackInfo
+{
+    width: 60%;
+    margin: auto;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+
+}
+#cashBackDiscount .cashBackInfo h1 
+{
+    
+    font-size: 40px;
+    width: 100%;
+}
+#cashBackDiscount .cashBackInfo p
+{
+    font-size: 18px;
+    width: 100%;
+}
+#cashBackDiscount .cashBackInfo button
+{
+    font-size: 20px;
+    padding: 15px;
+    width: 40%;
+}
+#bestDeal
+{
+   width: 96%;
+}
+#bestDeal .bestDealItems
+{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap:0;
+}
+#bestDeal .bestDealItems .dealItem
+{
+    width:96% ;
+}
+#bestDeal .bestDealItems .dealItem div .dealItemDispalyDescription
+{
+    font-size: 15px;
+    word-spacing: 0;
+    margin:0;
+}
+#bestDeal .bestDealItems .dealItem  .dealitemInfoNameAndPrice p 
+{
+    font-size: 20px;
+}
+#cashBackOffer
+{
+    width: 100%;
+}
+#cashBackOffer .cashBackOfferDetails
+{
+    width: 95%;
+    padding: 1em 0;
+}
+#cashBackOffer .cashBackOfferDetails .cashBackText
+{
+    width: 60%;
+}
+#cashBackOffer .cashBackOfferDetails .cashBackText h1
+{
+    font-size: 40px;
+}
+#cashBackOffer .cashBackOfferDetails .cashBackText p
+{
+   font-size: 25px;
+}
+#cashBackOffer .cashBackOfferDetails .cashBackText button
+{
+    width: 40%;
+}
+#cashBackOffer .cashBackOfferDetails .cashBackCard
+{
+    left: -5px;
+    width: 40%;
+}
+#cashBackOffer .cashBackOfferDetails .cashBackCard div{
+    width: 100px;
+}
+#sellingProducts
+{
+    width: 98%;
+}
+#sellingProducts .sellingProductItems
+{
+    grid-auto-columns: 50%;
+}
+#sellingProducts .sellingProductItems .sellingProduct .sellingProductItemDisplay .sellingproductItemImg img
+{
+    width: 300px;
+    height: 300px;
+}
+.sellingProductItemDisplayName
+{
+    font-size: 22px;
+}
+.sellingProductDescription
+{
+    font-size: 16px;
+}
+#trendingProduct
+{
+    width: 98%;
+}
+.trendingProductDisplay
+{
+    width: 100%;
+}
+.trendingProductDisplay .furnitureVillage, .trendingProductDisplay .fashionWorld
+{
+    width: 100%;
+}
+.trendingProductDisplay .furnitureVillage .furnitureVillageImg,.trendingProductDisplay .fashionWorld .fashionWorldImg
+{
+    height: 300px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.trendingProductDisplay div h3
+{
+    font-size: 25px;
+    margin: 0.2em 0;
+}
+.trendingProductDisplay div p
+{
+    font-size: 20px;
+}
+#best-selling-store
+{
+    width: 96%;
+}
+#best-selling-store .selling-stores
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.store .brandImg
+{
+    top: 260px;
+    width: 70px;
+}
+.store h3
+{
+    padding-top: 1.5em;
+    font-size: 20px;
+}
+.store .delivery  p
+{
+    float: left;
+}
+.store .storeDescription
+{
+    font-size: 15px;
+}
+#shoppingService
+{
+width: 96%;
+}
+#shoppingService .shoppingServices
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#shoppingService .shoppingServices .service 
+{
+   width: 380px; 
+}
+#shoppingService .shoppingServices .service  .serviceImg
+{
+
+}
+#shoppingService .shoppingServices .service  .serviceImg img
+{
+    width: 380px;
+}
+#shoppingService .shoppingServices .service  .serviceText h4
+{
+    width: 100%;
+    font-size: 22px;
+}
+#shoppingService .shoppingServices .service  .serviceText p
+{
+    width: 80%;
+    font-size: 16px;
 }
 
 
