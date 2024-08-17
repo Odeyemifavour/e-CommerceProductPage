@@ -2571,7 +2571,7 @@ footer .footerBottom section
 }
 #bestDeals
 {
-    width: 98%;
+    width: 94%;
 }
 #bestDeals .deals
 {
@@ -2627,7 +2627,7 @@ footer .footerBottom section
 }
 #popularProducts 
 {
-    width: 98%;
+    width: 94%;
 }
 #popularProducts .products
 {
@@ -2668,7 +2668,7 @@ footer .footerBottom section
 }
 #bestDeal
 {
-   width: 96%;
+   width: 94%;
 }
 #bestDeal .bestDealItems
 {
@@ -2726,7 +2726,7 @@ footer .footerBottom section
 }
 #sellingProducts
 {
-    width: 98%;
+    width: 94%;
 }
 #sellingProducts .sellingProductItems
 {
@@ -2747,7 +2747,7 @@ footer .footerBottom section
 }
 #trendingProduct
 {
-    width: 98%;
+    width: 94%;
 }
 .trendingProductDisplay
 {
@@ -2788,7 +2788,7 @@ footer .footerBottom section
 }
 .store h3
 {
-    padding-top: 1.5em;
+    padding-top: 1.8em;
     font-size: 20px;
 }
 .store .delivery  p
@@ -2801,7 +2801,7 @@ footer .footerBottom section
 }
 #shoppingService
 {
-width: 96%;
+width: 94%;
 }
 #shoppingService .shoppingServices
 {
@@ -2810,7 +2810,7 @@ width: 96%;
 }
 #shoppingService .shoppingServices .service 
 {
-   width: 380px; 
+   width: 360px; 
 }
 #shoppingService .shoppingServices .service  .serviceImg
 {
@@ -2818,19 +2818,58 @@ width: 96%;
 }
 #shoppingService .shoppingServices .service  .serviceImg img
 {
-    width: 380px;
+    width: 360px;
 }
 #shoppingService .shoppingServices .service  .serviceText h4
 {
     width: 100%;
-    font-size: 22px;
+    font-size: 20px;
 }
 #shoppingService .shoppingServices .service  .serviceText p
 {
     width: 80%;
     font-size: 16px;
 }
-
+footer
+{
+    width: 94%;
+}
+footer .footerTop
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    gap:40px;
+}
+footer .footerTop
+{
+    width: 100%;
+}
+footer .footerTop .paymentOption, footer .footerTop .departmentAndAbout, footer .footerTop .servicesAndHelp
+{
+    width: 100%;
+}
+footer .footerTop section 
+{
+    width: 100%;
+}
+.footer-line
+{
+    width:100%;
+    margin: auto;
+}
+footer .footerBottom
+{
+   display: flex;
+   flex-direction: column;
+   row-gap: 20px;
+   justify-content: center;
+}
+footer .footerBottom .right-reserved
+{
+    
+}
+}
 
 
 
