@@ -45,8 +45,10 @@ body
     align-items: center;
     cursor: pointer;
 }
+
 .pageTop .pageTopContent .shop .discount p
 {
+    margin-right: 2em;
     padding-right: 2em;
     border-right: 2px solid white;
     cursor: pointer;
@@ -653,6 +655,104 @@ body
 }
 
 }
-@media (min-width: 769px) and (max-width: 1024px){
-
+@media (min-width: 768px) and (max-width: 1024px){
+    header
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 80px;
+    }
+    header  .hamburger{
+        display: none;
+    }
+    .headerLogo
+    {
+        width: 10%;
+    }
+    .headerLogo a img 
+    {
+        width: 150px;
+    }
+    header .burger
+    {
+        display: block;
+        font-size: 20px;
+        width: 10%;
+        cursor: pointer;
+    }
+    .headerMenu .headerMenuList ul
+    {
+        display: none;
+    }
+    .headerAccountAndCart 
+    {
+        width: 70%;
+    }
+    .headerAccountAndCart   #cart,.headerAccountAndCart  #account
+    {
+        display: flex;
+        align-items: center;
+    }
+    .headerAccountAndCart  #account span i, .headerAccountAndCart   #cart span i
+    {
+        font-size: 20px;
+    }
+    .product-type
+    {
+       
+    }
+    .product-purchase-details
+    {
+        width: 90%;
+        flex-direction: column;
+    }
+    .product-img
+    {
+        width: 100%;
+    }
+    .product-img .product-original-img
+    {
+        margin: 3em 0;
+    }
+    .product-img .product-variety-img
+    {
+      justify-content: space-between;
+    }
+    .product-img .product-variety-img img
+    {
+        width: 150px;
+        height: 150px;
+        margin-right: 0;
+    }
+    .product-purchase-info
+    {
+       width: 100%;
+    }
+    hr 
+    {
+        width: 60%;
+    }
+    .product-purchase-info .delivery-details
+    {
+        display: flex;
+        flex: row;
+        align-items: center;
+        gap: 15px;
+        justify-content: space-evenly;
+    }
+    .specifications
+    {
+      flex-direction: column;
+    }
+    .specifications div
+    {
+        font-size: 20px;
+        width: 100%;
+    }
+    .specifications div table tr td
+    {
+        font-size: 18px;
+        width: 50%;
+    }
 }
