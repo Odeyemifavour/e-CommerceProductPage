@@ -111,7 +111,7 @@ function displayProductDetails(product) {
                 <span class="plus-order">+</span>
             </div>
             <div class="item-text">
-                <p>only <span>12 items</span> left</p>
+                <p>only <span class="items-left">12 items</span> left</p>
                 <p>don't miss it</p>
             </div>
         </div>
@@ -166,25 +166,41 @@ function displayProductDetails(product) {
 
 
 // functionality to add or minus order
-    const minusOrder = document.querySelector('.minus-order');
-    const plusOrder = document.querySelector('.plus-order');
-    const orderNumber = document.querySelector('.order-num');
-    let num = 1;
-    plusOrder.addEventListener('click', ()=>{
-        num++
-        if((num<10)){
-            orderNumber.innerText = "0" + num;
-        }
-        else{
-            orderNumber.innerText = num;
-        }
-    })
-    minusOrder.addEventListener('click', ()=>{
-        if((num>1)){
-            num--
-            orderNumber.innerText = "0" + num;
-        }
-    })
+  
+const minusOrder = document.querySelector('.minus-order');
+const plusOrder = document.querySelector('.plus-order');
+const orderNumber = document.querySelector('.order-num');
+const itemsLeft = document.querySelector('.items-left');
+
+let num = 1;
+let totalItems = 12;
+
+function updateDisplay() {
+    if (num < 10) {
+        orderNumber.innerText = "0" + num;
+    } else {
+        orderNumber.innerText = num;
+    }
+    itemsLeft.innerText = totalItems - num;
+}
+
+plusOrder.addEventListener('click', () => {
+    if (num < totalItems) {
+        num++;
+        updateDisplay();
+    }
+});
+
+minusOrder.addEventListener('click', () => {
+    if (num > 1) {
+        num--;
+        updateDisplay();
+    }
+});
+
+
+updateDisplay();
+
 
 //product specifications here
     const specifications = document.querySelector('.specifications');
