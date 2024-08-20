@@ -175,7 +175,7 @@ const itemsLeft = document.querySelector('.items-left');
 let num = 1;
 let totalItems = 12;
 
-function updateDisplay() {
+function updateItems() {
     if (num < 10) {
         orderNumber.innerText = "0" + num;
     } else {
@@ -187,19 +187,19 @@ function updateDisplay() {
 plusOrder.addEventListener('click', () => {
     if (num < totalItems) {
         num++;
-        updateDisplay();
+        updateItems();
     }
 });
 
 minusOrder.addEventListener('click', () => {
     if (num > 1) {
         num--;
-        updateDisplay();
+        updateItems();
     }
 });
 
 
-updateDisplay();
+updateItems();
 
 
 //product specifications here
